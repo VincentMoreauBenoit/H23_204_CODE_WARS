@@ -12,4 +12,12 @@
 <hr>
 <h1> Technologie </h1>
 <p> Pour coder notre jeu nous allons utiliser Unity. Unity est un logiciel de conception de jeux qui nous met à disposition beaucoup d’outils qui vont nous permettre de mener à bien notre projet. Parmi les outils que Unity nous met à notre disposition, il y a les différents assets que Unity nous donne qui pourront nous aider à rendre notre jeux beau et attirant. Unity utilise un système de script qui se font en c#. </p>
-<h2> Code par bloc <h2>
+<h2> Code par bloc </h2>
+<p> Le code par bloc consiste à simplifier le code, en  mettant sous la forme de petit bloc, les variables et les différentes foncitons(if... else, while ,etc). Cela permettera aux joeurs les plus débutants de comprendre. </p>
+<hr>
+<h1> Nouveauté et innovation </h1>
+<p> Il y a très peu de jeux qui ont comme concept le codage par bloc. Les seuls jeux qui proposent cette technique ont quelque default que nous voulons corriger. Premièrement, les jeux ne sont pas du tout amusants. Les jeux que nous avons vus était très technique et mettait un peu sur le coter l’amusement que devrait avoir un jeu. Deuxièmement, certain jeu mettait beaucoup sur l’amusement mais peu sur la technique. Le jeu devenait donc très simple et ne t’apprenait rien finalement de très concret. Nous allons alors essayer d’aller chercher un entre deux parfait. Que le jeu soit amusant mais qu’il reste complexe ce qui permet d’apprendre. Finalement, notre jeu est directement en lien avec la discipline de notre cour qui est évidemment la programmation. </p>
+<hr>
+<h1> Diagrammes </h1>
+<h2> Diagramme de Kant </h2>
+<p> Lien : </p>
