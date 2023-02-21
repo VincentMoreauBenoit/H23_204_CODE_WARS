@@ -6,7 +6,8 @@
 <h3> Lien suplémentaire </h3>
 <pre>Voici un lien qui vous fera apprendre encore plus en détail sur le jeux. Les troupes, leurs attaques, 
 le thèmes du jeux et des images seront sur le World ci dessous : 
-Lien World : </pre>
+Lien World : [Document de game design.docx](https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/files/10796821/Document.de.game.design.docx)
+</pre>
 <hr>
 <h1> Besoins </h1>
 <p>Le jeux vidéo qu’on propose est un jeu éducatif. Il y a donc pour but de faire apprendre aux joueurs les base de la programmation. Le code par bloc est très utile à cette égare, car la syntaxe et l’orthographe est déjà générer dans l’arrière-plan. En effet, généralement le problème pour un débutant, ce ne sont pas les concepts mais bien comment on l’écrit. Le code par bloc enlève toute sa et donne au joueur la chance d’apprendre la base sans se casser la tête à mettre des points virgule et des parenthèses.</p>
