@@ -20,4 +20,4 @@
 <hr>
 <h1> Diagrammes </h1>
 <h2> Diagramme de Kant </h2>
-<p> Lien : https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/6_Modele_Gantt.xlsx?raw=true </p>
+<p> Lien :[6_Modele_Gantt.xlsx](https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/files/10796764/6_Modele_Gantt.xlsx) </p>
