@@ -24,7 +24,9 @@ Lien World : [Document de game design.docx](https://github.com/VincentMoreauBeno
 <p> Il y a très peu de jeux qui ont comme concept le codage par bloc. Les seuls jeux qui proposent cette technique ont quelque default que nous voulons corriger. Premièrement, les jeux ne sont pas du tout amusants. Les jeux que nous avons vus était très technique et mettait un peu sur le coter l’amusement que devrait avoir un jeu. Deuxièmement, certain jeu mettait beaucoup sur l’amusement mais peu sur la technique. Le jeu devenait donc très simple et ne t’apprenait rien finalement de très concret. Nous allons alors essayer d’aller chercher un entre deux parfait. Que le jeu soit amusant mais qu’il reste complexe ce qui permet d’apprendre. Finalement, notre jeu est directement en lien avec la discipline de notre cour qui est évidemment la programmation. </p>
 <hr>
 <h1> Diagrammes </h1>
-<h2> Diagramme de Kant </h2>
+<h3> Diagramme de Kant </h3>
 <p> Lien :[6_Modele_Gantt.xlsx](https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/files/10796764/6_Modele_Gantt.xlsx) </p>
-<h2> Diagramme de Classe </h2>
+<h3> Diagramme de Classe </h3>
 <p> Lien : https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Code%20Wars%20_%20Diagramme%20de%20classse%20(1).pdf </p>
+<h3> Diagramme IHM </h3>
+<p> Lien : https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Diagramme%20IHM.pdf </p>
