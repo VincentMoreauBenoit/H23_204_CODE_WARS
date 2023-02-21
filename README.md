@@ -1,2 +1,28 @@
 <h1>CODE WARS</h1>
 <p>Code Wars est un jeu éducatif pour apprendre les bases de la logique derrière la programmation. Ce jeu vous voit incarner un chef de guerre qui essaie de donner les bons ordres pour que ses soldats puissent défendre ou attaquer des positions. Triompher de vos adversaires en croisant le fer et la magie.</p>
+<hr>
+<h1> Description et présentation du projet </h1>
+<p> Code Wars est un jeu éducatif qui met en lien le thème de la guerre et la programmation. Vous dirigez un général de guerre qui doit diriger et commander ses troupes qui ont pour objectifs de sois détruire la troupe adverse ou de remplir certain objectif sur le champ de bataille (Ex : Détruire une base adverse ou récupérer qu'elle que chose sur le champ de bataille). Le général peut contrôler 4 différents types de troupes. Les 4 différentes troupes bouges sur les arêtes d’un gros plan quadrillé. Le contrôle des troupes se fait par le joueur, qui avec une technique de code par bloc, dirige les troupes et leur fait faire des actions. Les troupes ont tous des mouvements distincts et des attaques propre a eux se qui rend l’expérience de jeux intéressante et diversifier. </p>
+<h3> Lien suplémentaire </h3>
+<pre>Voici un lien qui vous fera apprendre encore plus en détail sur le jeux. Les troupes, leurs attaques, 
+le thèmes du jeux et des images seront sur le World ci dessous : 
+Lien World : [Document de game design.docx](https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/files/10796821/Document.de.game.design.docx)
+</pre>
+<hr>
+<h1> Besoins </h1>
+<p>Le jeux vidéo qu’on propose est un jeu éducatif. Il y a donc pour but de faire apprendre aux joueurs les base de la programmation. Le code par bloc est très utile à cette égare, car la syntaxe et l’orthographe est déjà générer dans l’arrière-plan. En effet, généralement le problème pour un débutant, ce ne sont pas les concepts mais bien comment on l’écrit. Le code par bloc enlève toute sa et donne au joueur la chance d’apprendre la base sans se casser la tête à mettre des points virgule et des parenthèses.</p>
+<hr>
+<h1> Acteur </h1>
+<p>L’acteur principale, le seul dans notre jeu, serait le joueur. Le joueur contrôle les troupes et attaque son ennemie et son ennemie a été codé par nous pour attaquer le joueur. </p>
+<hr>
+<h1> Technologie </h1>
+<p> Pour coder notre jeu nous allons utiliser Unity. Unity est un logiciel de conception de jeux qui nous met à disposition beaucoup d’outils qui vont nous permettre de mener à bien notre projet. Parmi les outils que Unity nous met à notre disposition, il y a les différents assets que Unity nous donne qui pourront nous aider à rendre notre jeux beau et attirant. Unity utilise un système de script qui se font en c#. </p>
+<h2> Code par bloc </h2>
+<p> Le code par bloc consiste à simplifier le code, en  mettant sous la forme de petit bloc, les variables et les différentes foncitons(if... else, while ,etc). Cela permettera aux joeurs les plus débutants de comprendre. </p>
+<hr>
+<h1> Nouveauté et innovation </h1>
+<p> Il y a très peu de jeux qui ont comme concept le codage par bloc. Les seuls jeux qui proposent cette technique ont quelque default que nous voulons corriger. Premièrement, les jeux ne sont pas du tout amusants. Les jeux que nous avons vus était très technique et mettait un peu sur le coter l’amusement que devrait avoir un jeu. Deuxièmement, certain jeu mettait beaucoup sur l’amusement mais peu sur la technique. Le jeu devenait donc très simple et ne t’apprenait rien finalement de très concret. Nous allons alors essayer d’aller chercher un entre deux parfait. Que le jeu soit amusant mais qu’il reste complexe ce qui permet d’apprendre. Finalement, notre jeu est directement en lien avec la discipline de notre cour qui est évidemment la programmation. </p>
+<hr>
+<h1> Diagrammes </h1>
+<h2> Diagramme de Kant </h2>
+<p> Lien :[6_Modele_Gantt.xlsx](https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/files/10796764/6_Modele_Gantt.xlsx) </p>
