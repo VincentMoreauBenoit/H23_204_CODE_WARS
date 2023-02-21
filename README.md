@@ -26,3 +26,5 @@ Lien World : [Document de game design.docx](https://github.com/VincentMoreauBeno
 <h1> Diagrammes </h1>
 <h2> Diagramme de Kant </h2>
 <p> Lien :[6_Modele_Gantt.xlsx](https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/files/10796764/6_Modele_Gantt.xlsx) </p>
+<h2> Diagramme de Classe </h2>
+<p> Lien : https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Code%20Wars%20_%20Diagramme%20de%20classse%20(1).pdf </p>
