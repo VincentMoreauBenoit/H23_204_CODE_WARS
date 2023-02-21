@@ -1,3 +1,11 @@
+<style>
+body {
+  background-image: url('![Projet-arriere-plan](https://user-images.githubusercontent.com/123586590/220449679-fb4ea2d7-ad96-470b-976a-7315877a630f.jpg)
+');
+}
+</style>
+
+
 <h1>CODE WARS</h1>
 <p>Code Wars est un jeu éducatif pour apprendre les bases de la logique derrière la programmation. Ce jeu vous voit incarner un chef de guerre qui essaie de donner les bons ordres pour que ses soldats puissent défendre ou attaquer des positions. Triompher de vos adversaires en croisant le fer et la magie.</p>
 <hr>
