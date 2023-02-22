@@ -1,3 +1,5 @@
+<body style="background-color:#00991">
+
 <h1>CODE WARS</h1>
 <p>Code Wars est un jeu éducatif pour apprendre les bases de la logique derrière la programmation. Ce jeu vous voit incarner un chef de guerre qui essaie de donner les bons ordres pour que ses soldats puissent défendre ou attaquer des positions. Triompher de vos adversaires en croisant le fer et la magie.</p>
 <hr>
@@ -30,3 +32,5 @@ Lien World : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/
 <p> Lien : https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Code%20Wars%20_%20Diagramme%20de%20classse%20(1).pdf </p>
 <h3> Diagramme IHM </h3>
 <p> Lien : https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Diagramme%20IHM.pdf </p>
+
+ </body>
