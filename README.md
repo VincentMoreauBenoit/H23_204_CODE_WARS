@@ -4,7 +4,7 @@
 <h1> Description et présentation du projet </h1>
 <p> Code Wars est un jeu éducatif qui met en lien le thème de la guerre et la programmation. Vous dirigez un général de guerre qui doit diriger et commander ses troupes qui ont pour objectifs de sois détruire la troupe adverse ou de remplir certain objectif sur le champ de bataille (Ex : Détruire une base adverse ou récupérer qu'elle que chose sur le champ de bataille). Le général peut contrôler 4 différents types de troupes. Les 4 différentes troupes bouges sur les arêtes d’un gros plan quadrillé. Le contrôle des troupes se fait par le joueur, qui avec une technique de code par bloc, dirige les troupes et leur fait faire des actions. Les troupes ont tous des mouvements distincts et des attaques propre a eux se qui rend l’expérience de jeux intéressante et diversifier. </p>
 <h3> Lien suplémentaire : </h3>
-<pre>Voici un lien qui vous fera apprendre d'avantage sur le jeux. Les troupes et leurs attaques, 
+<pre>Voici un lien qui vous fera en apprendre d'avantage sur le jeux. Les troupes et leurs attaques, 
 les thèmes du jeux et des images seront disponible sur le World ci dessous : 
 Lien World : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/files/10796821/Document.de.game.design.docx>Document de Game design</a>
 </pre>
