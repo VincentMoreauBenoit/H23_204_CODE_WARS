@@ -7,9 +7,8 @@ using UnityEngine.EventSystems;
 
 public class BlocBouger : Bloc
 {
-
-    public Direction direction = Direction.AVANT;
-    public TMP_Dropdown dropdown;
+    [SerializeField] Direction direction = Direction.AVANT;
+    [SerializeField] TMP_Dropdown dropdown;
 
     public BlocBouger(TMP_Dropdown dropdown)
     {
