@@ -10,16 +10,12 @@ public class BlocBouger : Bloc
     [SerializeField] Direction direction = Direction.AVANT;
     [SerializeField] TMP_Dropdown dropdown;
 
-    public BlocBouger(TMP_Dropdown dropdown)
+    public BlocBouger()
     {
-        this.dropdown = dropdown;
         dropdown.onValueChanged.AddListener(delegate
         {
             changer();
         });
-       
-        
-        
     }
     public void changer()
     {
