@@ -779,7 +779,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -29.577148, y: -41.50775}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1319885791790070107
 CanvasRenderer:
@@ -905,6 +905,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ded73065e2fb440b84551454fa4bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  content: {fileID: 0}
+  prefabBloc: {fileID: 1319885791790070087}
   parentAfterDrag: {fileID: 0}
 --- !u!225 &3496349993502409730
 CanvasGroup:
@@ -930,6 +932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f7ec1ab6b94534194a8b122a562400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  siblingIndex: 0
+  provientBanque: 1
   direction: 0
   dropdown: {fileID: 1319885791790070105}
 --- !u!1 &1319885791794268791

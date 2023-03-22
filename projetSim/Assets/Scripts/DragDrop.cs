@@ -9,11 +9,15 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    private bool provientBanque = true;
     [SerializeField] private GameObject content;
+    [SerializeField] private GameObject prefabBloc;
     [HideInInspector] public RectTransform parentAfterDrag;
+    [HideInInspector] public bool toDelete = false;
 
-    
-    private void Awake(){
+
+
+    private void Start(){
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         parentAfterDrag = GetComponentInParent<RectTransform>();
@@ -22,6 +26,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        Debug.Log(provientBanque);
         canvasGroup.blocksRaycasts= false;
         canvasGroup.alpha = .6f;
         rectTransform.SetParent(rectTransform.root);
@@ -38,5 +43,37 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts= true;
         rectTransform.SetParent(parentAfterDrag);
+        if (provientBanque)
+        {
+            GameObject bloc;
+            if (toDelete)
+            {
+                toDelete = false;
+                bloc = Instantiate(prefabBloc);
+                toDelete = true;
+            }
+            else
+            {
+                bloc = Instantiate(prefabBloc);
+            }
+             bloc.GetComponent<RectTransform>().SetParent(content.GetComponent<RectTransform>());
+             var rect = bloc.GetComponent<RectTransform>();
+             rect.localPosition = GetComponent<RectTransform>().localPosition;
+             Vector3 temp = rect.localScale;
+             temp.x /= temp.x;
+             temp.y /= temp.y;
+             temp.z /= temp.z;
+             rect.localScale = temp;
+            
+        }
+
+        
+        provientBanque = false;
+
+        if(toDelete)
+        {
+           
+            Destroy(GetComponent<RectTransform>().gameObject);
+        }
     }
 }

@@ -23,7 +23,8 @@ public class Ligne : MonoBehaviour
         }
     }
     public static void verifLine()
-    {
+    { 
+        
         for(int i = 1; i< lignes.Count;i++)
         {
             var rect = lignes[i].GetComponent<RectTransform>();
@@ -34,6 +35,17 @@ public class Ligne : MonoBehaviour
                 i--;
             }
         }
+        var toutPlein = true;
+        for(int i = 0; i< lignes.Count; i++)
+        {
+            var rect = lignes[i].GetComponent<RectTransform>();
+            if (rect.childCount != 2)
+            {
+                toutPlein= false;
+            }
+        }
+        if (toutPlein) { }
+
     }
     public static void verifLineHaut()
     {
