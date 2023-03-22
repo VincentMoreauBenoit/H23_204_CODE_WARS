@@ -9,6 +9,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    [SerializeField] private GameObject content;
     [HideInInspector] public RectTransform parentAfterDrag;
 
     

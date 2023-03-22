@@ -4,6 +4,12 @@ using UnityEngine;
 
 public abstract class Bloc : MonoBehaviour
 {
+    public int siblingIndex;
+    public bool provientBanque = true;
+
+
     public abstract void executer(int i);
+
+    
 
 }

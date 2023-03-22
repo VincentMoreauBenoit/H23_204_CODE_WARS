@@ -10,15 +10,15 @@ public class BlocBouger : Bloc
     [SerializeField] Direction direction = Direction.AVANT;
     [SerializeField] TMP_Dropdown dropdown;
 
-    public BlocBouger()
+    public void Start()
     {
-        dropdown.onValueChanged.AddListener(delegate
-        {
-            changer();
-        });
+        siblingIndex = 0;
     }
+
+
     public void changer()
     {
+        Debug.Log("Changer");
         setDirection(dropdown.captionText.text);
     }
 
@@ -29,6 +29,7 @@ public class BlocBouger : Bloc
     }
     public void setDirection(string direct)
     {
+        
         if(direct == "Avant") 
         {
             direction = Direction.AVANT;
@@ -44,5 +45,6 @@ public class BlocBouger : Bloc
         {
             direction = Direction.ARRIERE;
         }
+        Debug.Log(direction.ToString());
     }
 }

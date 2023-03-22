@@ -175,7 +175,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 600, y: 409.049}
-  m_SizeDelta: {x: 400.001, y: 61.652008}
+  m_SizeDelta: {x: 380, y: 61.652008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &15607129461023881
 CanvasRenderer:
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabLine: {fileID: 15607129461023884}
   gameManager: {fileID: 0}
+  content: {fileID: 0}
 --- !u!114 &15607129461023879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 10
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
