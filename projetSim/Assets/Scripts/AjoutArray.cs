@@ -5,16 +5,13 @@ using UnityEngine;
 public class AjoutArray : MonoBehaviour
 {
     public List<Bloc> blocs= new List<Bloc>();
-
-    public void ajoutBloc(Bloc bloc)
-    {
-        blocs.Add(bloc);
-    }
     public void jouer()
     {
+        blocs = Ligne.CreerListeBloc();
         for(int i = 0;i < blocs.Count;i++)
         {
-            blocs[i].executer(i);
+            GameObject objet = null;
+            blocs[i].executer(objet);
         }
     }
 

@@ -26,7 +26,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log(provientBanque);
         canvasGroup.blocksRaycasts= false;
         canvasGroup.alpha = .6f;
         rectTransform.SetParent(rectTransform.root);
@@ -59,6 +58,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
              bloc.GetComponent<RectTransform>().SetParent(content.GetComponent<RectTransform>());
              var rect = bloc.GetComponent<RectTransform>();
              rect.localPosition = GetComponent<RectTransform>().localPosition;
+             var compBloc = bloc.GetComponent<Bloc>();
+             rect.SetSiblingIndex(compBloc.GetSiblingIndex());
              Vector3 temp = rect.localScale;
              temp.x /= temp.x;
              temp.y /= temp.y;

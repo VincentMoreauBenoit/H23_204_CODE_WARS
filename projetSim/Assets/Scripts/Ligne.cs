@@ -14,18 +14,12 @@ public class Ligne : MonoBehaviour
     private void Start()
     {
         lignes.Add(this);
-
-        int index = 0;
-        foreach(Ligne ligne in lignes)
-        {
-            ligne.modifierText(index);
-            index++;
-        }
+        verifIndice();
     }
     public static void verifLine()
     { 
         
-        for(int i = 1; i< lignes.Count;i++)
+        for(int i = 1; i< lignes.Count-1;i++)
         {
             var rect = lignes[i].GetComponent<RectTransform>();
             if (rect.childCount != 2)
@@ -35,17 +29,9 @@ public class Ligne : MonoBehaviour
                 i--;
             }
         }
-        var toutPlein = true;
-        for(int i = 0; i< lignes.Count; i++)
-        {
-            var rect = lignes[i].GetComponent<RectTransform>();
-            if (rect.childCount != 2)
-            {
-                toutPlein= false;
-            }
-        }
-        if (toutPlein) { }
+        verifIndice();
 
+       
     }
     public static void verifLineHaut()
     {
@@ -65,5 +51,27 @@ public class Ligne : MonoBehaviour
         index++;
         string num = index.ToString();
         text.GetComponent<TMP_Text>().text = num;
+    }
+    public static void verifIndice()
+    {
+        int index = 0;
+        foreach (Ligne ligne in lignes)
+        {
+            ligne.modifierText(index);
+            index++;
+        }
+    }
+    public static List<Bloc> CreerListeBloc()
+    {
+        List<Bloc> blocs = new List<Bloc>();
+        foreach (Ligne ligne in lignes)
+        {
+            if(ligne.GetComponentInChildren<Bloc>() != null)
+            {
+                blocs.Add(ligne.GetComponentInChildren<Bloc>());
+            }
+               
+        }
+        return blocs;
     }
 }

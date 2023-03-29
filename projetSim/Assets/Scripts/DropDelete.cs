@@ -8,7 +8,9 @@ public class DropDelete : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
-        dropped.GetComponent<DragDrop>().toDelete = true;
+        if (dropped.GetComponent<DragDrop>() != null) {
+            dropped.GetComponent<DragDrop>().toDelete = true;
+        }
         Ligne.verifLine();
     }
 }

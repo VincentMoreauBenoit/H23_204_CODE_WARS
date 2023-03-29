@@ -18,12 +18,11 @@ public class BlocBouger : Bloc
 
     public void changer()
     {
-        Debug.Log("Changer");
         setDirection(dropdown.captionText.text);
     }
 
     override
-    public void executer(int i)
+    public void executer(GameObject troupe)
     {
         Debug.Log(direction.ToString());
     }
@@ -45,6 +44,11 @@ public class BlocBouger : Bloc
         {
             direction = Direction.ARRIERE;
         }
-        Debug.Log(direction.ToString());
+        
+    }
+
+    public override int GetSiblingIndex()
+    {
+        return siblingIndex;
     }
 }
