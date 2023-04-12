@@ -10,19 +10,19 @@ public class ChangeScene : MonoBehaviour
 
 
 
-    
+
     void Start()
     {
-        
+
     }
 
     public void changeScene()
     {
-        
-        SceneManager.LoadScene(sceneNameToLoad); // Change la scene
+
+        SceneManager.LoadScene(sceneNameToLoad); // Changer la scene
 
     }
-    
-        
-    }
+
+
+}
 
