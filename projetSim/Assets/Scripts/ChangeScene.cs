@@ -20,6 +20,7 @@ public class ChangeScene : MonoBehaviour
     {
         Ligne.viderList();
         SceneManager.LoadScene(sceneNameToLoad); // Change la scene
+
     }
 }
 
