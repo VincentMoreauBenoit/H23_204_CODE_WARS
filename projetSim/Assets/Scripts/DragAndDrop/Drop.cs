@@ -22,22 +22,32 @@ public class Drop : MonoBehaviour, IDropHandler
         if(eventData.pointerDrag != null) { 
             eventData.pointerDrag.GetComponent<RectTransform>().localPosition = GetComponent<RectTransform>().localPosition;
         }
+        if (rectTransform.childCount < 2)
+        {
+            var ligne2 = Instantiate(prefabLine);
+            var rect = ligne2.GetComponent<RectTransform>();
+            var rectCont = content.GetComponent<RectTransform>();
+            rect.SetParent(rectCont);
+            rect.localPosition = GetComponent<RectTransform>().localPosition;
+            Debug.Log(rect.localScale);
+            Vector3 temp = rect.localScale;
+            temp.x /= temp.x; 
+            temp.y /= temp.y; 
+            temp.z /= temp.z;
+            rect.localScale = temp;
 
-        var ligne2 = Instantiate(prefabLine);
-        var rect = ligne2.GetComponent<RectTransform>();
-        var rectCont = content.GetComponent<RectTransform>();
-        rect.SetParent(rectCont);
-        rect.localPosition = GetComponent<RectTransform>().localPosition;
-        Debug.Log(rect.localScale);
-        Vector3 temp = rect.localScale;
-        temp.x /= temp.x; 
-        temp.y /= temp.y; 
-        temp.z /= temp.z;
-        rect.localScale = temp;
-
-        rect.localRotation = GetComponent<RectTransform>().localRotation;
+            rect.localRotation = GetComponent<RectTransform>().localRotation;
 
 
-        Ligne.verifLineHaut();
+            Ligne.verifLineHaut();
+        }
+        else
+        {
+            if (dropped.GetComponent<DragDrop>() != null)
+            {
+                dropped.GetComponent<DragDrop>().toDelete = true;
+            }
+        }
+       
     }
 }
