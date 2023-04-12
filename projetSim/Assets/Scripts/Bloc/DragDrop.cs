@@ -65,7 +65,9 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
              temp.y /= temp.y;
              temp.z /= temp.z;
              rect.localScale = temp;
-            
+             rect.localRotation = GetComponent<RectTransform>().localRotation;
+
+
         }
 
         
