@@ -74,4 +74,8 @@ public class Ligne : MonoBehaviour
         }
         return blocs;
     }
+    public static void viderList()
+    {
+        lignes.Clear();
+    }
 }

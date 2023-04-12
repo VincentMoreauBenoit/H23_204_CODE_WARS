@@ -18,11 +18,8 @@ public class ChangeScene : MonoBehaviour
 
     public void changeScene()
     {
-
-        SceneManager.LoadScene(sceneNameToLoad); // Changer la scene
-
+        Ligne.viderList();
+        SceneManager.LoadScene(sceneNameToLoad); // Change la scene
     }
-
-
 }
 
