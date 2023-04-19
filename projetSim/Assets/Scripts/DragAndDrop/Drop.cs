@@ -29,7 +29,6 @@ public class Drop : MonoBehaviour, IDropHandler
             var rectCont = content.GetComponent<RectTransform>();
             rect.SetParent(rectCont);
             rect.localPosition = GetComponent<RectTransform>().localPosition;
-            Debug.Log(rect.localScale);
             Vector3 temp = rect.localScale;
             temp.x /= temp.x; 
             temp.y /= temp.y; 
