@@ -19,11 +19,7 @@ public class GameManager : MonoBehaviour
         pickPerso();
         instantiated = Instantiate(persoAllie[activePersoIndex]);
 
-        instantiated.transform.position = new Vector3(
-            Random.Range(transform.position.x - zoneSize.x / 2,transform.position.x + zoneSize.x / 2),
-            Random.Range(zoneSize.y / 2,zoneSize.y / 2),
-            Random.Range(transform.position.z - zoneSize.z / 2, transform.position.z + zoneSize.z / 2)
-            );
+        instantiated.transform.position = new Vector3(-100,-198.8f, 150);
 
     }
 
@@ -55,7 +51,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
+    
     private void pickPerso()
     {
        
@@ -63,6 +59,4 @@ public class GameManager : MonoBehaviour
         activePersoIndex= persoIndex;
         GameObject activePerso = persoAllie[activePersoIndex];
     }
-
-
 }
