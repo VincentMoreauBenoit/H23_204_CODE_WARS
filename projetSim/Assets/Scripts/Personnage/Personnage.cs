@@ -87,7 +87,7 @@ public class Personnage : MonoBehaviour
         if (Cac.isGrounded)
         {
 
-            moveD = new Vector3(0, 0, 1.80f);
+            moveD = new Vector3(0, 0, deplacement);
             moveD = transform.TransformDirection(moveD);                
             
         }
