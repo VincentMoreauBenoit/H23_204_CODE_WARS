@@ -78,6 +78,5 @@ public class Ligne : MonoBehaviour
     public static void viderList()
     {
         lignes.Clear();
-
     }
 }

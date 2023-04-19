@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] perso;
+    private GameObject[] persoEnnemi;
+    private GameObject[] persoAllie;
     private GameObject instantiated; 
 
     private int activePersoIndex = 0;
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pickPerso();
-        instantiated = Instantiate(perso[activePersoIndex]);
+        instantiated = Instantiate(persoAllie[activePersoIndex]);
 
         instantiated.transform.position = new Vector3(-100,-198.8f, 150);
 
@@ -53,9 +55,8 @@ public class GameManager : MonoBehaviour
     private void pickPerso()
     {
        
-        int persoIndex = UnityEngine.Random.Range(0, perso.Length);
+        int persoIndex = UnityEngine.Random.Range(0, persoAllie.Length);
         activePersoIndex= persoIndex;
-        GameObject activePerso = perso[activePersoIndex];
+        GameObject activePerso = persoAllie[activePersoIndex];
     }
-    
 }
