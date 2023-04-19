@@ -8,6 +8,7 @@ public abstract class Bloc : MonoBehaviour
     public bool provientBanque = true;
 
 
+
     public abstract void executer(GameObject troupe);
 
     public abstract int GetSiblingIndex();

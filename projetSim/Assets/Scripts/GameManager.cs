@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,23 +7,25 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] persoEnnemi;
+    [SerializeField]
     private GameObject[] persoAllie;
-    private GameObject instantiated; 
+    private GameObject instantiated;
+    [SerializeField]
+    private List<Bloc> blocs = new List<Bloc>();
+    [SerializeField]
+    private int nombreDeSec = 3;
+    private int index = 0;
+    private bool joue = false;
 
-    private int activePersoIndex = 0;
 
     [SerializeField]
     private Vector3 zoneSize;
 
-    
-    void Start()
+    private void Start()
     {
-        pickPerso();
-        instantiated = Instantiate(persoAllie[activePersoIndex]);
-
-        instantiated.transform.position = new Vector3(-100,-198.8f, 150);
-
+        instantiated = persoEnnemi[0];
     }
+
 
     void Update()
     {
@@ -49,14 +53,42 @@ public class GameManager : MonoBehaviour
             instantiated.GetComponent<Personnage>().setDirection(Direction.GAUCHE);
             instantiated.GetComponent<Personnage>().resetTimer();
         }
+        if(joue)
+        {
+            index = 0;
+        }
 
     }
-    
-    private void pickPerso()
+    public void runGame()
     {
-       
-        int persoIndex = UnityEngine.Random.Range(0, persoAllie.Length);
-        activePersoIndex= persoIndex;
-        GameObject activePerso = persoAllie[activePersoIndex];
+        bool finpartie = false;
+        while (!finpartie)
+        {
+            
+            foreach (GameObject troupe in persoAllie)
+            {
+               
+                accederBloc(troupe);
+            }
+            joue = false;
+            finpartie= true;
+        }
+
     }
+    public void jouer()
+    {
+        blocs = Ligne.CreerListeBloc();
+        runGame();
+        joue = true;
+    }
+    public void accederBloc(GameObject troupe)
+    {
+        blocs[index].executer(troupe);
+    }
+    
+
+    
+
+        
+               
 }

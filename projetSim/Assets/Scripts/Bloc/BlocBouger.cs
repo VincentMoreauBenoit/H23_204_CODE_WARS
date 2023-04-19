@@ -24,7 +24,13 @@ public class BlocBouger : Bloc
     override
     public void executer(GameObject troupe)
     {
-        Debug.Log(direction.ToString());
+        if (troupe.GetComponent<Personnage>() != null)
+        {
+            Personnage perso = troupe.GetComponent<Personnage>();
+            perso.setDirection(direction);
+            perso.resetTimer();
+        }
+
     }
     public void setDirection(string direct)
     {
