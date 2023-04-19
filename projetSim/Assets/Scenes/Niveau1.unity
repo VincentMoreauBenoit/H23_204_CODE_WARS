@@ -518,10 +518,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 107662703}
-    - target: {fileID: 1626272603, guid: 0aad1128aac3c2548bdb649af8101a1f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: changeScene
-      objectReference: {fileID: 0}
     - target: {fileID: 3084577709679383736, guid: 0aad1128aac3c2548bdb649af8101a1f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -774,8 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba611093831d6784e961d5ffb92d51f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perso:
-  - {fileID: 2766520990056341028, guid: b4a79bd2a2c960f4f8f45e4014978a83, type: 3}
+  persoEnnemi: []
   zoneSize: {x: 8, y: 5, z: 8}
 --- !u!4 &1813860250
 Transform:
