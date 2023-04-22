@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private GameObject[] persoEnnemi;
     [SerializeField]
     private GameObject[] persoAllie;
+<<<<<<< Updated upstream
     private GameObject instantiated;
     [SerializeField]
     private List<Bloc> blocs = new List<Bloc>();
@@ -17,13 +18,21 @@ public class GameManager : MonoBehaviour
     private int index = 0;
     private bool joue = false;
 
+=======
+>>>>>>> Stashed changes
 
     [SerializeField]
     private Vector3 zoneSize;
 
     private void Start()
     {
+<<<<<<< Updated upstream
         instantiated = persoEnnemi[0];
+=======
+        
+
+
+>>>>>>> Stashed changes
     }
 
 
@@ -31,27 +40,34 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.AVANT);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.AVANT);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
            
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.ARRIERE);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.ARRIERE);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
+
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.DROITE);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.DROITE);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
+
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.GAUCHE);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.GAUCHE);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
+
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            persoAllie[0].GetComponent<Personnage>().attaque();
         }
         if(joue)
         {
@@ -59,6 +75,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+<<<<<<< Updated upstream
     public void runGame()
     {
         bool finpartie = false;
@@ -91,4 +108,7 @@ public class GameManager : MonoBehaviour
 
         
                
+=======
+
+>>>>>>> Stashed changes
 }

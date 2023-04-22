@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Personnage : MonoBehaviour
 {
+    //Variable déplacement
     [SerializeField]
     private int life = 0;
     [SerializeField]
@@ -14,14 +15,22 @@ public class Personnage : MonoBehaviour
     private float deplacement = 0;
     [SerializeField]
     private float gravity;
-    [SerializeField]
+    [SerializeField] 
     private float tempsMax = 1;
     private float tempsEcouler = 0;
     private bool avancer = false;
 
+    // Variable pour l'attaque
+    [SerializeField]
+    public float attackRange;
+    public GameObject rayHit;
+
+
+
     CharacterController Cac;
     Vector3 moveD = Vector3.zero;
     public Direction direction;
+    Vector3 up = vector3(0,1,0);
 
 
     public Personnage(int life, int speed, int deplacement)
@@ -35,7 +44,7 @@ public class Personnage : MonoBehaviour
     public void Start()
     {
         Cac = GetComponent<CharacterController>();
-        
+        rayHit = GameObject.find("Rayhit");
     }
 
     public void Update()
@@ -111,6 +120,28 @@ public class Personnage : MonoBehaviour
     {
         tempsEcouler = 0;
         avancer = true;
+    }
+
+    public void attaque()
+    {
+        Debug.Log("Attaque!!!!");
+
+       
+        RayCastHit hit;
+
+        if (Physics.Raycast(transform.position + Vector3.up * 0.25f, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+        {
+            Debug.DrawLine(transform.position + Vector3.up * 0.25f, hit.point, Color.red);
+
+
+            if (hit.transform.tag == "test") 
+            { 
+            print(hit.transform.name + "detected");
+            }
+
+
+
+        }
     }
 }
 

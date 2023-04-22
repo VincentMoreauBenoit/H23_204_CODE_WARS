@@ -999,6 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba611093831d6784e961d5ffb92d51f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   persoEnnemi:
   - {fileID: 1622160214}
   - {fileID: 420862}
@@ -1007,6 +1008,11 @@ MonoBehaviour:
   - {fileID: 1142667700}
   blocs: []
   nombreDeSec: 3
+=======
+  persoEnnemi: []
+  persoAllie:
+  - {fileID: 121574, guid: fe2a5bf9b4c2d4a4b9853a8506f18c40, type: 3}
+>>>>>>> Stashed changes
   zoneSize: {x: 8, y: 5, z: 8}
 --- !u!4 &1813860250
 Transform:
