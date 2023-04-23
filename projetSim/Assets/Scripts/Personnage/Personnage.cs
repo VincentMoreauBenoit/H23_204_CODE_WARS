@@ -30,7 +30,6 @@ public class Personnage : MonoBehaviour
     CharacterController Cac;
     Vector3 moveD = Vector3.zero;
     public Direction direction;
-    Vector3 up = vector3(0,1,0);
 
 
     public Personnage(int life, int speed, int deplacement)
@@ -44,7 +43,7 @@ public class Personnage : MonoBehaviour
     public void Start()
     {
         Cac = GetComponent<CharacterController>();
-        rayHit = GameObject.find("Rayhit");
+      //  rayHit = GameObject.find("Rayhit");
     }
 
     public void Update()
@@ -122,6 +121,7 @@ public class Personnage : MonoBehaviour
         avancer = true;
     }
 
+    /*
     public void attaque()
     {
         Debug.Log("Attaque!!!!");
@@ -142,6 +142,8 @@ public class Personnage : MonoBehaviour
 
 
         }
-    }
+    */
+    
 }
+
 
