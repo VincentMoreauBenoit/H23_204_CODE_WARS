@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int nombreDeSec = 3;
     private int index = 0;
-    private bool joue = false;
+
+    private float tempsEntreAction = 1;
+
+    private bool finPartie = true;
 
 
     [SerializeField]
@@ -59,33 +62,48 @@ public class GameManager : MonoBehaviour
         {
          //   persoAllie[0].GetComponent<Personnage>().attaque();
         }
-        if(joue)
-        {
-            index = 0;
+
+
+        if(!finPartie){
+            tempsEntreAction-= Time.deltaTime;
+            if(tempsEntreAction<0){
+                tempsEntreAction = 1f;
+                runGame();
+            }
         }
 
     }
     public void runGame()
     {
-        bool finpartie = false;
-        while (!finpartie)
-        {
-            
+        finPartie = false;
+        if(!finPartie){
             foreach (GameObject troupe in persoAllie)
             {
                
                 accederBloc(troupe);
+                
             }
-            joue = false;
-            finpartie= true;
+
+            if(index<=blocs.Count-1){
+                index++;
+            }else{
+                index = 0;
+            }
+            if(persoAllie.Length==0||persoEnnemi.Length==0){
+                finPartie = true;
+            }
         }
+       
+                
+
+        
+        
 
     }
     public void jouer()
     {
         blocs = Ligne.CreerListeBloc();
         runGame();
-        joue = true;
     }
     public void accederBloc(GameObject troupe)
     {
