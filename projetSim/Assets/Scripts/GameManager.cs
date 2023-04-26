@@ -89,8 +89,8 @@ public class GameManager : MonoBehaviour
                 
             }
             index = 0;
-            if(index>=blocs.Count-1){
-                index=0;
+            if(index>=blocs.Count - 1){
+                index = 0;
             }else{
                 index++;
             }
@@ -99,12 +99,6 @@ public class GameManager : MonoBehaviour
                 finPartie = true;
             }
         }
-       
-                
-
-        
-        
-
     }
     public void jouer()
     {
