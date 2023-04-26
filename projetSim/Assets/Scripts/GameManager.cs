@@ -17,12 +17,16 @@ public class GameManager : MonoBehaviour
     private int index = 0;
     private bool joue = false;
 
+    public Personnage personnage;
+
 
     [SerializeField]
     private Vector3 zoneSize;
 
     private void Start()
     { 
+
+
     }
 
 
@@ -57,7 +61,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-         //   persoAllie[0].GetComponent<Personnage>().attaque();
+            persoAllie[0].GetComponent<Personnage>().attaque();
+            
         }
         if(joue)
         {

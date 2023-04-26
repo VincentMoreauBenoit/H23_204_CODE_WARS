@@ -15,7 +15,7 @@ public class Personnage : MonoBehaviour
     private float deplacement = 0;
     [SerializeField]
     private float gravity;
-    [SerializeField] 
+    [SerializeField]
     private float tempsMax = 1;
     private float tempsEcouler = 0;
     private bool avancer = false;
@@ -23,7 +23,8 @@ public class Personnage : MonoBehaviour
     // Variable pour l'attaque
     [SerializeField]
     public float attackRange;
-    public GameObject rayHit;
+    public bool toucher = false;
+    //public GameObject RayHit;
 
 
 
@@ -43,76 +44,76 @@ public class Personnage : MonoBehaviour
     public void Start()
     {
         Cac = GetComponent<CharacterController>();
-      //  rayHit = GameObject.find("Rayhit");
+      //  RayHit = GameObject.Find("RayHit");
     }
 
     public void Update()
-    {       
+    {
 
         if (avancer)
         {
             tempsEcouler = tempsEcouler + Time.deltaTime;
             bouger();
         }
-        if(tempsEcouler >= tempsMax)
+        if (tempsEcouler >= tempsMax)
         {
-            avancer= false;
+            avancer = false;
         }
-       
+
     }
 
     public void bouger()
     {
 
 
-            if (direction == Direction.DROITE)
-            {
-                
-                transform.Rotate(0, 90, 0);
-                direction = Direction.AVANT;
-               
-             }
+        if (direction == Direction.DROITE)
+        {
 
-            if (direction == Direction.GAUCHE)
-            {
-                
-                transform.Rotate(0, -90, 0);
-                direction = Direction.AVANT;
-               
+            transform.Rotate(0, 90, 0);
+            direction = Direction.AVANT;
 
-             }
+        }
 
-            if(direction == Direction.ARRIERE)
-            {
-                
-                transform.Rotate(0, 180, 0);
-                direction = Direction.AVANT;
-            
-             }
+        if (direction == Direction.GAUCHE)
+        {
 
-            
+            transform.Rotate(0, -90, 0);
+            direction = Direction.AVANT;
+
+
+        }
+
+        if (direction == Direction.ARRIERE)
+        {
+
+            transform.Rotate(0, 180, 0);
+            direction = Direction.AVANT;
+
+        }
+
+
 
         if (Cac.isGrounded)
         {
 
             moveD = new Vector3(0, 0, deplacement);
-            moveD = transform.TransformDirection(moveD);                
-            
+            moveD = transform.TransformDirection(moveD);
+
         }
 
-       
-        
-            moveD.y -= gravity * Time.deltaTime;
-            Cac.Move(moveD * Time.deltaTime);
 
-      
+
+        moveD.y -= gravity * Time.deltaTime;
+        Cac.Move(moveD * Time.deltaTime);
+
+
 
     }
 
     public void setDirection(Direction direction)
 
     {
-        this.direction= direction;
+        this.direction = direction;
     }
 
     public void resetTimer()
@@ -121,29 +122,43 @@ public class Personnage : MonoBehaviour
         avancer = true;
     }
 
-    /*
+
     public void attaque()
     {
-        Debug.Log("Attaque!!!!");
+        /*
+        Ray ray = new Ray(transform.position, Vector3.up);
+        RaycastHit hit;
 
-       
-        RayCastHit hit;
 
-        if (Physics.Raycast(transform.position + Vector3.up * 0.25f, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+        if (Physics.Raycast(ray, out hit))
         {
-            Debug.DrawLine(transform.position + Vector3.up * 0.25f, hit.point, Color.red);
-
-
-            if (hit.transform.tag == "test") 
-            { 
-            print(hit.transform.name + "detected");
+            if (hit.collider != null)
+            {
+                Destroy(hit.transform.gameObject);
             }
-
-
-
         }
     */
-    
+       
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + Vector3.up, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+        {
+            Debug.DrawLine(transform.position + Vector3.up, hit.point, Color.red);
+
+
+            if (hit.transform.tag == "test")
+            {
+                print(hit.transform.name + "detected");
+                Destroy(hit.transform.gameObject);
+                
+            }
+
+            
+
+        }
+
+
+    }
 }
+
 
 
