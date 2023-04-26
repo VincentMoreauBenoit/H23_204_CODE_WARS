@@ -317,15 +317,17 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+    - Assets/Scenes
     - Assets/Scripts/Bloc
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
+  - Assets/Scenes
   - Assets/Scripts/Bloc
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Users\2152556\Documents\GitHub\H23_204_CODE_WARS\projetSim
+  m_LastProjectPath: C:\Users\vinmo\OneDrive\Documents\GitHub\H23_204_CODE_WARS\projetSim
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -361,6 +363,7 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 00000000865d0000
+    m_ExpandedIDs: 000000004c5a00004e5a0000505a0000525a0000545a0000565a0000585a00005a5a00005c5a00005e5a0000605a0000625a0000645a0000665a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -820,9 +823,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.4831976, y: -0.0047301725, z: 0.0026111335, w: -0.8754982}
+    m_Target: {x: -0.2634193, y: -0.031527907, z: 0.008610449, w: -0.96413434}
     speed: 2
-    m_Value: {x: -0.4831976, y: -0.0047301725, z: 0.0026111335, w: -0.8754982}
+    m_Value: {x: -0.2634176, y: -0.031527705, z: 0.008610393, w: -0.96412814}
   m_Size:
     m_Target: 6.6974607
     speed: 2
@@ -926,20 +929,20 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1103
-      height: 517
+      width: 882.00006
+      height: 384.4
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 551.5, y: 258.5}
+    m_Translation: {x: 441.00003, y: 192.2}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -551.5
-      y: -258.5
-      width: 1103
-      height: 517
+      x: -441.00003
+      y: -192.2
+      width: 882.00006
+      height: 384.4
     m_MinimalGUI: 1
   m_defaultScale: 0.4787037
   m_LastWindowPixelSize: {x: 1103, y: 538}
