@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
             }else{
                 index++;
             }
+            
             if(persoAllie.Length==0||persoEnnemi.Length==0){
                 finPartie = true;
             }
@@ -107,5 +108,13 @@ public class GameManager : MonoBehaviour
     public void accederBloc(GameObject troupe)
     {
         blocs[index].executer(troupe);
-    }       
+    }
+
+    public GameObject[] getPersoAllie(){
+        return persoAllie;
+    }     
+
+    public GameObject[] getPersoEnnemi(){
+        return persoEnnemi;
+    }
 }

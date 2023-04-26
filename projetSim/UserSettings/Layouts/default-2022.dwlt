@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 43
+  controlID: 51
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 44
+  controlID: 52
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 45
+  controlID: 53
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,21 +318,23 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
     - Assets/Scenes
+    - Assets/Scripts/Bloc
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
   - Assets/Scenes
+  - Assets/Scripts/Bloc
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\vinmo\OneDrive\Documents\GitHub\H23_204_CODE_WARS\projetSim
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 164.6}
-    m_SelectedIDs: 885a0000
-    m_LastClickedID: 23176
-    m_ExpandedIDs: 000000004c5a00004e5a0000505a0000525a0000545a0000565a0000585a00005a5a00005c5a00005e5a0000605a0000625a0000645a0000665a000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 40700000
+    m_LastClickedID: 28736
+    m_ExpandedIDs: 00000000c8640000386e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,9 +490,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8ae9ffff
-      m_LastClickedID: -5750
-      m_ExpandedIDs: 8ae9ffffa6e9ffffbae9ffff6eecffff76eeffffd2efffff2af0ffffb8f1ffff88f5ffff8af9ffff16faffff36fbffff
+      m_SelectedIDs: e6600000
+      m_LastClickedID: 24806
+      m_ExpandedIDs: c0f7ffff38f8ffffecfaffff4e610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -772,9 +774,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -66.679535, y: -95.206406, z: 62.145596}
+    m_Target: {x: -133.3956, y: -131.29382, z: 26.058176}
     speed: 2
-    m_Value: {x: -66.679535, y: -95.206406, z: 62.145596}
+    m_Value: {x: -133.3956, y: -131.29382, z: 26.058176}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -824,9 +826,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.2634176, y: -0.031527705, z: 0.008610393, w: -0.96412814}
   m_Size:
-    m_Target: 117.76386
+    m_Target: 6.6974607
     speed: 2
-    m_Value: 117.76386
+    m_Value: 6.6974607
   m_Ortho:
     m_Target: 0
     speed: 2
