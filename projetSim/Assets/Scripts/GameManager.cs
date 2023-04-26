@@ -88,22 +88,16 @@ public class GameManager : MonoBehaviour
                 accederBloc(troupe);
                 
             }
-
-            if(index<=blocs.Count-1){
-                index++;
-            }else{
+            index = 0;
+            if(index>=blocs.Count - 1){
                 index = 0;
+            }else{
+                index++;
             }
             if(persoAllie.Length==0||persoEnnemi.Length==0){
                 finPartie = true;
             }
         }
-       
-                
-
-        
-        
-
     }
     public void jouer()
     {
