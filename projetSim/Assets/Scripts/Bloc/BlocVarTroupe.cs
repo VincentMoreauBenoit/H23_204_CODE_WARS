@@ -7,16 +7,16 @@ public class BlocVarTroupe : Bloc
 
     void Start()
     {
-        
+        siblingIndex = 2;
     }
 
     public override void executer(GameObject troupe)
     {
-        Debug.Log("Mémoire");
+        Debug.Log("MÃ©moire");
     }
 
     public override int GetSiblingIndex()
     {
-        throw new System.NotImplementedException();
+        return siblingIndex;
     }
 }
