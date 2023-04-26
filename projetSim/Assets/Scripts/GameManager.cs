@@ -20,12 +20,16 @@ public class GameManager : MonoBehaviour
 
     private bool finPartie = true;
 
+    public Personnage personnage;
+
 
     [SerializeField]
     private Vector3 zoneSize;
 
     private void Start()
     { 
+
+
     }
 
 
@@ -60,7 +64,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-         //   persoAllie[0].GetComponent<Personnage>().attaque();
+            persoAllie[0].GetComponent<Personnage>().attaque();
+            
         }
 
 
