@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Bloc : MonoBehaviour
 {
-    public int siblingIndex;
+    protected int siblingIndex;
     public bool provientBanque = true;
 
 

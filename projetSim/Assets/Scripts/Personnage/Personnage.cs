@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Personnage : MonoBehaviour
 {
-    //Variable déplacement
+    //Variable dï¿½placement
     [SerializeField]
     private int life = 0;
     [SerializeField]
@@ -19,6 +19,7 @@ public class Personnage : MonoBehaviour
     private float tempsMax = 1;
     private float tempsEcouler = 0;
     private bool avancer = false;
+    private TableauIndice memoire;
 
     // Variable pour l'attaque
     [SerializeField]
@@ -139,7 +140,7 @@ public class Personnage : MonoBehaviour
         }
     */
         /*
-         Si le personnage n'a pas d'attaque spécifiquer il obtient tout simplement
+         Si le personnage n'a pas d'attaque spï¿½cifiquer il obtient tout simplement
          l'attaque de base
         */
 
@@ -167,6 +168,14 @@ public class Personnage : MonoBehaviour
         return life;
     }
 
+    public void setMemoire(TableauIndice indice)
+    {
+        memoire = indice;
+    }
+    public TableauIndice accederMemoire()
+    {
+        return memoire;
+    }
 }
 
 

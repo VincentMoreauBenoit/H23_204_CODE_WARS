@@ -2,23 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlocAttaque : Bloc
+public class BlocIf : Bloc
 {
-    public Personnage personnage;
 
+
+    public void Start()
+    {
+        siblingIndex= 3;
+    }
     public override void executer(GameObject troupe)
     {
-        troupe.GetComponent<Personnage>().attaque();
-
+        Debug.Log("Bloc if");
     }
 
     public override int GetSiblingIndex()
     {
         return siblingIndex;
-    }
-
-    public void Start()
-    {
-        siblingIndex = 1;
     }
 }
