@@ -123,7 +123,7 @@ public class Personnage : MonoBehaviour
     }
 
 
-    public void attaque()
+    public virtual void attaque()
     {
         /*
         Ray ray = new Ray(transform.position, Vector3.up);
@@ -138,26 +138,35 @@ public class Personnage : MonoBehaviour
             }
         }
     */
-       
+        /*
+         Si le personnage n'a pas d'attaque spécifiquer il obtient tout simplement
+         l'attaque de base
+        */
+
+        attaqueDeBase();
+
+
+    }
+    public void attaqueDeBase()
+    {
         RaycastHit hit;
         if (Physics.Raycast(transform.position + Vector3.up, transform.TransformDirection(Vector3.forward), out hit, attackRange))
         {
-            Debug.DrawLine(transform.position + Vector3.up, hit.point, Color.red);
-
-
+            
             if (hit.transform.tag == "test")
             {
                 print(hit.transform.name + "detected");
                 Destroy(hit.transform.gameObject);
-                
+
             }
-
-            
-
         }
-
-
     }
+
+    public int getLife()
+    {
+        return life;
+    }
+
 }
 
 

@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
             
         }
 
-
+        
         if(!finPartie){
             tempsEntreAction-= Time.deltaTime;
             if(tempsEntreAction<0){

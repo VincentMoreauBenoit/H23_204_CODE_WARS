@@ -8,4 +8,20 @@ public class Archer : Personnage
     {
     }
 
+    public override void attaque()
+    {
+
+        
+        Vector3 devant = transform.TransformDirection(Vector3.forward);
+
+        RaycastHit hit;
+
+
+        if(Physics.Raycast(transform.position, devant, out hit, attackRange))
+        {
+            Debug.Log("Trouver un objet cette distance " + hit.distance);
+
+        }
+        
+    }
 }
