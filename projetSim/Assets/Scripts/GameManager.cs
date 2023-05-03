@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private List<Bloc> blocs = new List<Bloc>();
     [SerializeField]
-    private int nombreDeSec = 3;
     private int index = 0;
 
     private float tempsEntreAction = 1;
@@ -70,6 +69,7 @@ public class GameManager : MonoBehaviour
 
 
         if(!finPartie){
+
             tempsEntreAction-= Time.deltaTime;
             if(tempsEntreAction<0){
                 tempsEntreAction = 1f;

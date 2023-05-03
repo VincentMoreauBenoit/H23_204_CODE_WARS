@@ -19,6 +19,7 @@ public class Personnage : MonoBehaviour
     private float tempsMax = 1;
     private float tempsEcouler = 0;
     private bool avancer = false;
+    private TableauIndice memoire;
 
     // Variable pour l'attaque
     [SerializeField]
@@ -157,6 +158,14 @@ public class Personnage : MonoBehaviour
         }
 
 
+    }
+    public void setMemoire(TableauIndice indice)
+    {
+        memoire = indice;
+    }
+    public TableauIndice accederMemoire()
+    {
+        return memoire;
     }
 }
 

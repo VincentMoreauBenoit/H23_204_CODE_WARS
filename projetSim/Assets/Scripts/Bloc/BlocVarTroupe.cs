@@ -11,6 +11,7 @@ public class BlocVarTroupe : Bloc
     [SerializeField] private GameManager manager;
     private GameObject[] persoAllie;
     private GameObject[] persoEnnemi;
+    private int indiceTotal;
     [SerializeField] private TMP_Dropdown dropdown;
     private List<string> option;
 
@@ -26,11 +27,15 @@ public class BlocVarTroupe : Bloc
         for(int i = 0; i<persoEnnemi.Length;i++){
             option.Add("Ennemi #"+i);
         }
+        dropdown.AddOptions(option);
     }
 
     public override void executer(GameObject troupe)
     {
-        Debug.Log("Mémoire");
+        indiceTotal = dropdown.value;
+        TableauIndice indice = new TableauIndice();
+        indice.convert(indiceTotal);
+        troupe.GetComponent<Personnage>().setMemoire(indice);
     }
 
     public override int GetSiblingIndex()
