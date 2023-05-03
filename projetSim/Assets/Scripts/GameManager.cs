@@ -15,15 +15,21 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int nombreDeSec = 3;
     private int index = 0;
-    private bool joue = false;
+
+    private float tempsEntreAction = 1;
+
+    private bool finPartie = true;
+
+    public Personnage personnage;
 
 
     [SerializeField]
     private Vector3 zoneSize;
 
     private void Start()
-    {
-        instantiated = persoEnnemi[0];
+    { 
+
+
     }
 
 
@@ -31,64 +37,84 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.AVANT);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.AVANT);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
            
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.ARRIERE);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.ARRIERE);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
+
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.DROITE);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.DROITE);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
+
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            instantiated.GetComponent<Personnage>().setDirection(Direction.GAUCHE);
-            instantiated.GetComponent<Personnage>().resetTimer();
+            persoAllie[0].GetComponent<Personnage>().setDirection(Direction.GAUCHE);
+            persoAllie[0].GetComponent<Personnage>().resetTimer();
+
         }
-        if(joue)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            index = 0;
+            persoAllie[0].GetComponent<Personnage>().attaque();
+            
+        }
+
+
+        if(!finPartie){
+            tempsEntreAction-= Time.deltaTime;
+            if(tempsEntreAction<0){
+                tempsEntreAction = 1f;
+                runGame();
+            }
         }
 
     }
     public void runGame()
     {
-        bool finpartie = false;
-        while (!finpartie)
-        {
-            
+        finPartie = false;
+        if(!finPartie){
             foreach (GameObject troupe in persoAllie)
             {
                
                 accederBloc(troupe);
+                
             }
-            joue = false;
-            finpartie= true;
+            index = 0;
+            if(index>=blocs.Count - 1){
+                index = 0;
+            }else{
+                index++;
+            }
+            
+            if(persoAllie.Length==0||persoEnnemi.Length==0){
+                finPartie = true;
+            }
         }
-
     }
     public void jouer()
     {
         blocs = Ligne.CreerListeBloc();
         runGame();
-        joue = true;
     }
     public void accederBloc(GameObject troupe)
     {
         blocs[index].executer(troupe);
     }
-    
 
-    
+    public GameObject[] getPersoAllie(){
+        return persoAllie;
+    }     
 
-        
-               
+    public GameObject[] getPersoEnnemi(){
+        return persoEnnemi;
+    }
 }
