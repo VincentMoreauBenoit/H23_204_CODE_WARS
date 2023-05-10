@@ -59,7 +59,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
              var rect = bloc.GetComponent<RectTransform>();
              rect.localPosition = GetComponent<RectTransform>().localPosition;
              var compBloc = bloc.GetComponent<Bloc>();
-             rect.SetSiblingIndex(compBloc.GetSiblingIndex());
+             //rect.SetSiblingIndex(compBloc.GetSiblingIndex());
              Vector3 temp = rect.localScale;
              temp.x /= temp.x;
              temp.y /= temp.y;

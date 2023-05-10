@@ -20,6 +20,7 @@ public class Personnage : MonoBehaviour
     private float tempsEcouler = 0;
     private bool avancer = false;
     private TableauIndice memoire;
+    private bool accesBloc = true;
 
     // Variable pour l'attaque
     [SerializeField]
@@ -175,6 +176,10 @@ public class Personnage : MonoBehaviour
     public TableauIndice accederMemoire()
     {
         return memoire;
+    }
+    public void flip(bool allo)
+    {
+        accesBloc = allo; 
     }
 }
 

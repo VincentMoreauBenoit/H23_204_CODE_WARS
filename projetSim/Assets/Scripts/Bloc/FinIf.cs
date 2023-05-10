@@ -2,21 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlocIf : Bloc
+public class FinIf : Bloc
 {
-
-
-    public void Start()
-    {
-        siblingIndex= 3;
-    }
     public override void executer(GameObject troupe)
     {
-        
+        troupe
     }
 
     public override int GetSiblingIndex()
     {
-        return siblingIndex;
+        throw new System.NotImplementedException();
     }
 }
