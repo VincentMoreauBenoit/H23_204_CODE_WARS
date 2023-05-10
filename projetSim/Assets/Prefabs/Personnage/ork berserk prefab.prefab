@@ -3357,6 +3357,7 @@ GameObject:
   - component: {fileID: 95716040400269070}
   - component: {fileID: 847398142077671803}
   - component: {fileID: 9066433941680508332}
+  - component: {fileID: 2805005105358720082}
   m_Layer: 0
   m_Name: ork berserk prefab
   m_TagString: Untagged
@@ -3434,12 +3435,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f017b5d3e16ef449de811f2e352309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 7
   speed: 6
   deplacement: 10
   gravity: 1
   tempsMax: 1
+  attackRange: 0
+  toucher: 0
+  vie: {fileID: 2805005105358720082}
   direction: 0
+--- !u!114 &2805005105358720082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186413494234004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bd6523abff97e4d97ef1a3a178bc78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vie: 100
 --- !u!1 &1188194207369212
 GameObject:
   m_ObjectHideFlags: 0

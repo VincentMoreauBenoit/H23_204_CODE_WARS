@@ -84,7 +84,6 @@ public class GameManager : MonoBehaviour
         if(!finPartie){
             foreach (GameObject troupe in persoAllie)
             {
-               
                 accederBloc(troupe);
                 
             }
