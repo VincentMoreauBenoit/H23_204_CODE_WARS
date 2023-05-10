@@ -172,8 +172,8 @@ public class Personnage : MonoBehaviour
     }
     public void flip(bool allo)
     {
-        accesBloc = allo; 
-
+        accesBloc = allo;
+    }
     public void getGravity()
     {
         moveD.y -= gravity * Time.deltaTime;
