@@ -2,13 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEngine;
+using UnityEngine;  
+
 
 public class Personnage : MonoBehaviour
 {
-    //Variable d�placement
-    [SerializeField]
-    private int life = 0;
+    //Variable deplacement   
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -24,10 +23,12 @@ public class Personnage : MonoBehaviour
 
     // Variable pour l'attaque
     [SerializeField]
-    public float attackRange;
+    public int attaqueRange;
     public bool toucher = false;
+    private int damage;
     //public GameObject RayHit;
 
+    [SerializeField] private Vie vie;
 
 
     CharacterController Cac;
@@ -35,11 +36,11 @@ public class Personnage : MonoBehaviour
     public Direction direction;
 
 
-    public Personnage(int life, int speed, int deplacement)
+    public Personnage(int speed, int deplacement, int damage)
     {
-        this.life = life;
         this.speed = speed;
         this.deplacement = deplacement;
+        this.damage = damage;
         gravity = 1;
 
     }
@@ -105,8 +106,7 @@ public class Personnage : MonoBehaviour
 
 
 
-        moveD.y -= gravity * Time.deltaTime;
-        Cac.Move(moveD * Time.deltaTime);
+        getGravity();
 
 
 
@@ -144,31 +144,24 @@ public class Personnage : MonoBehaviour
          Si le personnage n'a pas d'attaque sp�cifiquer il obtient tout simplement
          l'attaque de base
         */
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 20f);
 
-        attaqueDeBase();
-
-
-    }
-    public void attaqueDeBase()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position + Vector3.up, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+        foreach (Collider c in colliders)
         {
-            
-            if (hit.transform.tag == "test")
+            if (c.GetComponent<Personnage>())
             {
-                print(hit.transform.name + "detected");
-                Destroy(hit.transform.gameObject);
-
+                
+                Debug.Log(gameObject.tag);
+                Debug.Log(c.tag);
+                if (gameObject.tag != c.tag)
+                {
+                    
+                    c.GetComponent<Vie>().Damage(10);
+                }
             }
         }
+        
     }
-
-    public int getLife()
-    {
-        return life;
-    }
-
     public void setMemoire(TableauIndice indice)
     {
         memoire = indice;
@@ -180,6 +173,22 @@ public class Personnage : MonoBehaviour
     public void flip(bool allo)
     {
         accesBloc = allo; 
+
+    public void getGravity()
+    {
+        moveD.y -= gravity * Time.deltaTime;
+        Cac.Move(moveD * Time.deltaTime);
+    }
+    public int getDomage() 
+    {
+
+        return damage;
+    }
+
+    public int getAttaqueRange() 
+    {
+
+        return attaqueRange;
     }
 }
 

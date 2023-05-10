@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class Barbare : Personnage
 {
-    public Barbare() : base(7, 6, 2)
-    {
-
+    public Barbare() : base(7, 6, 5) 
+    { 
     }
 
+
+    public override void attaque() 
+    {
+    
+    
+
+
+
+
+    }
 }
+
+

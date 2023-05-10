@@ -744,11 +744,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f448b479792dd4781ba7f4ecf92084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 2
   speed: 4
   deplacement: 10
   gravity: 1
   tempsMax: 1
+  attackRange: 0
+  toucher: 0
+  vie: {fileID: 0}
   direction: 0
 --- !u!143 &6003307977258281359
 CharacterController:

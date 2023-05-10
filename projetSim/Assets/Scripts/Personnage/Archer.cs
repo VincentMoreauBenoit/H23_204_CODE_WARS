@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Archer : Personnage
 {
-    public Archer() : base(10, 3, 2)
+    public Archer() : base(10, 3,15)
     {
     }
 
@@ -17,9 +17,14 @@ public class Archer : Personnage
         RaycastHit hit;
 
 
-        if(Physics.Raycast(transform.position, devant, out hit, attackRange))
+        if(Physics.Raycast(transform.position, devant, out hit, Mathf.Infinity))
         {
-            Debug.Log("Trouver un objet cette distance " + hit.distance);
+            if(hit.collider == true) 
+            {
+
+                hit.collider.GetComponent<Vie>().Damage(this.getDomage());
+
+            }
 
         }
         

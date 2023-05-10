@@ -238,9 +238,10 @@ GameObject:
   - component: {fileID: 979329811746619527}
   - component: {fileID: 850113633939245714}
   - component: {fileID: 9011168042602679832}
+  - component: {fileID: 810005548209954664}
   m_Layer: 0
   m_Name: Infanterie - Copy
-  m_TagString: Untagged
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +261,7 @@ Transform:
   - {fileID: 417404}
   - {fileID: 423532}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &9569962
 Animator:
@@ -294,13 +295,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2edf7bdf674b14eb6029d2e8fdc4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
   speed: 2
   deplacement: 10.06
   gravity: 1
   tempsMax: 1
-  attackRange: 0
-  rayHit: {fileID: 0}
+  attackRange: 30
+  toucher: 0
+  vie: {fileID: 810005548209954664}
   direction: 0
 --- !u!143 &850113633939245714
 CharacterController:
@@ -330,10 +331,23 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
+  m_Radius: 1
+  m_Height: 2
+  m_Direction: 0
   m_Center: {x: 0, y: 0.84, z: 0}
+--- !u!114 &810005548209954664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bd6523abff97e4d97ef1a3a178bc78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vie: 100
 --- !u!1 &131548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1103,7 @@ Transform:
   m_GameObject: {fileID: 176902}
   m_LocalRotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
   m_LocalPosition: {x: 0, y: 0.45108902, z: -0.036125187}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 410042}
