@@ -18,6 +18,8 @@ public class Personnage : MonoBehaviour
     private float tempsMax = 1;
     private float tempsEcouler = 0;
     private bool avancer = false;
+
+    //Variable pour bloc
     private TableauIndice memoire;
     private bool accesBloc = true;
 
@@ -25,9 +27,13 @@ public class Personnage : MonoBehaviour
     [SerializeField]
     public int attaqueRange;
     public bool toucher = false;
-    private int damage;
-    //public GameObject RayHit;
+    private int dommage;
+    [SerializeField]
+    private Material myMaterial;
 
+
+
+    // Vie des personnage
     [SerializeField] private Vie vie;
 
 
@@ -36,18 +42,17 @@ public class Personnage : MonoBehaviour
     public Direction direction;
 
 
-    public Personnage(int speed, int deplacement, int damage)
+    public Personnage(int speed, int deplacement, int dommage)
     {
         this.speed = speed;
         this.deplacement = deplacement;
-        this.damage = damage;
+        this.dommage = dommage;
         gravity = 1;
 
     }
     public void Start()
     {
         Cac = GetComponent<CharacterController>();
-      //  RayHit = GameObject.Find("RayHit");
     }
 
     public void Update()
@@ -127,36 +132,20 @@ public class Personnage : MonoBehaviour
 
     public virtual void attaque()
     {
-        /*
-        Ray ray = new Ray(transform.position, Vector3.up);
-        RaycastHit hit;
-
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider != null)
-            {
-                Destroy(hit.transform.gameObject);
-            }
-        }
-    */
-        /*
-         Si le personnage n'a pas d'attaque sp�cifiquer il obtient tout simplement
-         l'attaque de base
-        */
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 20f);
+        // L'attaque de base (Infanterie et Barbare)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, attaqueRange);
 
         foreach (Collider c in colliders)
         {
+
             if (c.GetComponent<Personnage>())
             {
-                
-                Debug.Log(gameObject.tag);
-                Debug.Log(c.tag);
+                // Recherche si le GameObject toucher est un ennemie pour l'allier et
+                // un allier pour l'ennemi. IL n'attaqua pas leur amis.
                 if (gameObject.tag != c.tag)
                 {
                     
-                    c.GetComponent<Vie>().Damage(10);
+                    c.GetComponent<Vie>().Damage(dommage);
                 }
             }
         }
@@ -179,10 +168,15 @@ public class Personnage : MonoBehaviour
         moveD.y -= gravity * Time.deltaTime;
         Cac.Move(moveD * Time.deltaTime);
     }
-    public int getDomage() 
+    public int getDommage() 
     {
 
-        return damage;
+        return dommage;
+    }
+
+    public void setDommage(int newDamage) 
+    {
+        this.dommage = newDamage; 
     }
 
     public int getAttaqueRange() 
@@ -190,6 +184,11 @@ public class Personnage : MonoBehaviour
 
         return attaqueRange;
     }
+    public int getVie() 
+    {
+        return vie.getLife();
+    
+    } 
 }
 
 

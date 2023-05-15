@@ -8,6 +8,8 @@ public class Archer : Personnage
     {
     }
 
+    // L'attaque est différente pour un archer. Il tir un flèche à l'infini et touche la première 
+    // personne que la fléche rencontre. Ensuite, la fléche disparait.
     public override void attaque()
     {
 
@@ -22,8 +24,7 @@ public class Archer : Personnage
             if(hit.collider == true) 
             {
 
-                hit.collider.GetComponent<Vie>().Damage(this.getDomage());
-
+                hit.collider.GetComponent<Vie>().Damage(this.getDommage());
             }
 
         }

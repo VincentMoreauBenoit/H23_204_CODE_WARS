@@ -534,6 +534,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3084577709679383736, guid: 0aad1128aac3c2548bdb649af8101a1f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -600.975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084577710432034866, guid: 0aad1128aac3c2548bdb649af8101a1f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -199.02606
+      objectReference: {fileID: 0}
     - target: {fileID: 3084577710616201899, guid: 0aad1128aac3c2548bdb649af8101a1f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -702,6 +710,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8796746459438199770, guid: 0aad1128aac3c2548bdb649af8101a1f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aad1128aac3c2548bdb649af8101a1f, type: 3}
@@ -783,6 +795,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   persoEnnemi: []
+  persoAllie: []
+  blocs: []
+  index: 0
+  personnage: {fileID: 0}
   zoneSize: {x: 8, y: 5, z: 8}
 --- !u!4 &1813860250
 Transform:

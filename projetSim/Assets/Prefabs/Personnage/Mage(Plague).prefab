@@ -687,6 +687,8 @@ GameObject:
   - component: {fileID: 8921442118748462820}
   - component: {fileID: 3393925229490070058}
   - component: {fileID: 6003307977258281359}
+  - component: {fileID: 16056806424401194}
+  - component: {fileID: 697812045761762608}
   m_Layer: 0
   m_Name: Mage(Plague)
   m_TagString: Untagged
@@ -703,14 +705,14 @@ Transform:
   m_GameObject: {fileID: 2766520990056341028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 524343726641562516}
   - {fileID: 3920903351234170644}
   - {fileID: 6010947459770635729}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8921442118748462820
 Animator:
@@ -748,9 +750,9 @@ MonoBehaviour:
   deplacement: 10
   gravity: 1
   tempsMax: 1
-  attackRange: 0
+  attaqueRange: 50
   toucher: 0
-  vie: {fileID: 0}
+  vie: {fileID: 16056806424401194}
   direction: 0
 --- !u!143 &6003307977258281359
 CharacterController:
@@ -770,6 +772,60 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.97, z: 0}
+--- !u!114 &16056806424401194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766520990056341028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bd6523abff97e4d97ef1a3a178bc78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vie: 100
+--- !u!23 &697812045761762608
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766520990056341028}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials: []
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2787789027213459379
 GameObject:
   m_ObjectHideFlags: 0

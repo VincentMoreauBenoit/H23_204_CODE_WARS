@@ -239,9 +239,10 @@ GameObject:
   - component: {fileID: 850113633939245714}
   - component: {fileID: 9011168042602679832}
   - component: {fileID: 810005548209954664}
+  - component: {fileID: 2045041257}
   m_Layer: 0
   m_Name: Infanterie - Copy
-  m_TagString: test
+  m_TagString: Ennemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +262,7 @@ Transform:
   - {fileID: 417404}
   - {fileID: 423532}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &9569962
 Animator:
@@ -299,7 +300,7 @@ MonoBehaviour:
   deplacement: 10.06
   gravity: 1
   tempsMax: 1
-  attackRange: 30
+  attaqueRange: 20
   toucher: 0
   vie: {fileID: 810005548209954664}
   direction: 0
@@ -348,6 +349,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vie: 100
+--- !u!23 &2045041257
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121574}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials: []
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &131548
 GameObject:
   m_ObjectHideFlags: 0

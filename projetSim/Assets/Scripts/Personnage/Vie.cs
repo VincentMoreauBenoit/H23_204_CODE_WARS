@@ -36,5 +36,10 @@ public class Vie : MonoBehaviour
     
     
     }
+    public int getLife() {
+
+        return vie;
+    
+    }
         
 }
