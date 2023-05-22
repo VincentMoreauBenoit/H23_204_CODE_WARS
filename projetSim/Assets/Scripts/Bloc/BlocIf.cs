@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BlocIf : Bloc
 {
-
+    [SerializeField] private TMP_Dropdown dropdownComparant;
+    [SerializeField] private TMP_Dropdown dropCompare;
+    [SerializeField] private TMP_Dropdown dropComparer;
 
     public void Start()
     {
@@ -12,7 +15,7 @@ public class BlocIf : Bloc
     }
     public override void executer(GameObject troupe)
     {
-        
+       
     }
 
     public override int GetSiblingIndex()
