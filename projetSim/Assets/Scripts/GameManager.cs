@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    /*
+    [SerializeField]
+    private List<GameObject> persoEnnemi = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> persoAllie = new List<GameObject>();
+    */
+
     [SerializeField]
     private GameObject[] persoEnnemi;
+    private int ennemis = 0;
     [SerializeField]
     private GameObject[] persoAllie;
     private GameObject instantiated;
@@ -77,6 +85,27 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        for(int i = 0; i < persoAllie.Length; i++) 
+        {
+            if (persoAllie[i].GetComponent<Personnage>().getVie() <= 0) 
+            {
+                Debug.Log("DEAD!!!");
+               // Destroy(persoAllie[i]);
+               // persoAllie.RemoveAt(i);
+            }
+        }
+
+        for (int i = 0; i < persoEnnemi.Length; i++)
+        {
+            if (persoEnnemi[i].GetComponent<Personnage>().getVie() <= 0)
+            {
+                int elementAEnlever = i;
+
+                Destroy(persoEnnemi[i]);
+                enleverPerso(elementAEnlever);   
+                
+            }
+        }
     }
     public void runGame()
     {
@@ -84,8 +113,15 @@ public class GameManager : MonoBehaviour
         if(!finPartie){
             foreach (GameObject troupe in persoAllie)
             {
+                ennemis++;
                 accederBloc(troupe);
+                if(ennemis == persoAllie.Length * 2) 
+                {
+
+                    ennemis = 0;
+                    ennemiBouge();
                 
+                }
             }
             index = 0;
             if(index>=blocs.Count - 1){
@@ -115,5 +151,59 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] getPersoEnnemi(){
         return persoEnnemi;
+    }
+
+    public void enleverPerso(int indexAEnlever)
+    {
+
+        List<GameObject> list = new List<GameObject>(persoEnnemi);
+        list.RemoveAt(indexAEnlever);
+        Debug.Log(list.Count);
+        persoEnnemi = list.ToArray();
+
+    }
+    public void ennemiBouge() 
+    {
+
+
+        for (int i = 0; i < persoEnnemi.Length; i++)
+        {
+            int deplacement = Random.Range(0,5);
+            switch (deplacement)
+            {
+                case 1:
+                    {
+                        persoEnnemi[i].GetComponent<Personnage>().setDirection(Direction.AVANT);
+                        persoEnnemi[i].GetComponent<Personnage>().resetTimer();
+                        break;
+                    }
+                case 2:
+                    {
+                        persoEnnemi[i].GetComponent<Personnage>().setDirection(Direction.ARRIERE);
+                        persoEnnemi[i].GetComponent<Personnage>().resetTimer();
+                        break;
+                    }
+                case 3:
+                    {
+                        persoEnnemi[i].GetComponent<Personnage>().setDirection(Direction.DROITE);
+                        persoEnnemi[i].GetComponent<Personnage>().resetTimer();
+                        break;
+                    }
+                case 4:
+                    {
+                        persoEnnemi[i].GetComponent<Personnage>().setDirection(Direction.GAUCHE);
+                        persoEnnemi[i].GetComponent<Personnage>().resetTimer();
+                        break;
+                    }
+                case 5:
+                    {
+                        persoEnnemi[i].GetComponent<Personnage>().attaque();
+                        break;
+                    }
+                default:
+                    break;
+            }
+
+        }
     }
 }

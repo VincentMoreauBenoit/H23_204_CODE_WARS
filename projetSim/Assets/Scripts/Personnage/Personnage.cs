@@ -27,7 +27,7 @@ public class Personnage : MonoBehaviour
     [SerializeField]
     public int attaqueRange;
     public bool toucher = false;
-    private int dommage;
+    private float dommage;
     [SerializeField]
     private Material myMaterial;
 
@@ -42,7 +42,7 @@ public class Personnage : MonoBehaviour
     public Direction direction;
 
 
-    public Personnage(int speed, int deplacement, int dommage)
+    public Personnage(int speed, int deplacement, float dommage)
     {
         this.speed = speed;
         this.deplacement = deplacement;
@@ -168,13 +168,13 @@ public class Personnage : MonoBehaviour
         moveD.y -= gravity * Time.deltaTime;
         Cac.Move(moveD * Time.deltaTime);
     }
-    public int getDommage() 
+    public float getDommage() 
     {
 
         return dommage;
     }
 
-    public void setDommage(int newDamage) 
+    public void setDommage(float newDamage) 
     {
         this.dommage = newDamage; 
     }
@@ -184,7 +184,7 @@ public class Personnage : MonoBehaviour
 
         return attaqueRange;
     }
-    public int getVie() 
+    public float getVie() 
     {
         return vie.getLife();
     

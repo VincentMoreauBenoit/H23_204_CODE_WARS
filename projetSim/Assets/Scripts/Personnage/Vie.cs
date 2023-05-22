@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using UnityEngine.UI;
+using TMPro;
 public class Vie : MonoBehaviour
 {
-    [SerializeField] private int vie;
+    [SerializeField] private float vie;
 
-    public Vie(int vie)
+    public Image barreDeVie;
+
+
+    public Vie(float vie)
     {
         this.vie = vie;
     }
 
-    public void Damage(int amount)
+
+    public void Damage(float amount)
     {
         if (amount < 0) 
         {
@@ -21,7 +26,8 @@ public class Vie : MonoBehaviour
         }
 
 
-        this.vie -= amount;        
+        this.vie -= amount;
+        barreDeVie.fillAmount = this.vie / 100;
 
         if(vie <= 0) 
         {
@@ -31,12 +37,12 @@ public class Vie : MonoBehaviour
 
     private void Die() 
     {
-        Debug.Log("I am Dead!");
-        Destroy(gameObject);
+       // Debug.Log("I am Dead!");
+       // Destroy(gameObject);
     
     
     }
-    public int getLife() {
+    public float getLife() {
 
         return vie;
     
