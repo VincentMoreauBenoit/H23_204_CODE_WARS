@@ -190,6 +190,9 @@ public class Personnage : MonoBehaviour
 
         return attaqueRange;
     }
+    public int getVie(){
+        return vie.getVie();
+    }
 }
 
 
