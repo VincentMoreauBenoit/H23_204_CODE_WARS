@@ -5,13 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    /*
-    [SerializeField]
-    private List<GameObject> persoEnnemi = new List<GameObject>();
-    [SerializeField]
-    private List<GameObject> persoAllie = new List<GameObject>();
-    */
-
     [SerializeField]
     private GameObject[] persoEnnemi;
     private int ennemis = 0;
@@ -89,9 +82,11 @@ public class GameManager : MonoBehaviour
         {
             if (persoAllie[i].GetComponent<Personnage>().getVie() <= 0) 
             {
-                Debug.Log("DEAD!!!");
-               // Destroy(persoAllie[i]);
-               // persoAllie.RemoveAt(i);
+                int elementASupprimer = i;
+
+                Destroy(persoAllie[i]);
+                enleverPerso(elementASupprimer);
+
             }
         }
 
