@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     // Variable allier
     [SerializeField] private GameObject[] persoAllie;
 
+    [SerializeField] private ChangeScene changeScene;
+
     // Variable pour personnage
     private GameObject instantiated;
     public Personnage personnage;
@@ -27,7 +29,7 @@ public class GameManager : MonoBehaviour
 
 
     /// <summary>
-    /// Un petit debug qui nous permet de tester le déplacement des personnages.
+    /// Un petit debug qui nous permet de tester le dï¿½placement des personnages.
     /// </summary>
     void Update()
     {
@@ -74,8 +76,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Regarde si un personnage allié est mort. Si oui, le supprime de son tableau
-        // et le détruit ensuite
+        // Regarde si un personnage alliï¿½ est mort. Si oui, le supprime de son tableau
+        // et le dï¿½truit ensuite
         for(int i = 0; i < persoAllie.Length; i++) 
         {
             if (persoAllie[i].GetComponent<Personnage>().getVie() <= 0) 
@@ -89,7 +91,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Regarde si un personnage ennemi est mort. Si oui, le supprime de son tableau
-        // et le détruit ensuite
+        // et le dï¿½truit ensuite
         for (int i = 0; i < persoEnnemi.Length; i++)
         {
             if (persoEnnemi[i].GetComponent<Personnage>().getVie() <= 0)
@@ -104,8 +106,8 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Lance la partie. Elle lance les bloc à la chaine et 
-    /// s'arrête quand un personnage, que sa soit allié ou ennemi, meurt.
+    /// Lance la partie. Elle lance les bloc ï¿½ la chaine et 
+    /// s'arrï¿½te quand un personnage, que sa soit alliï¿½ ou ennemi, meurt.
     /// </summary>
     public void runGame()
     {
@@ -116,7 +118,7 @@ public class GameManager : MonoBehaviour
                 ennemis++;
                 accederBloc(troupe);
 
-                // Les ennemis se déplacement une fois tout les deux tour des personnages alliés. 
+                // Les ennemis se dï¿½placement une fois tout les deux tour des personnages alliï¿½s. 
                 if(ennemis == persoAllie.Length * 2) 
                 {
 
@@ -125,8 +127,7 @@ public class GameManager : MonoBehaviour
                 
                 }
             }
-            index = 0;
-            if(index>=blocs.Count - 1){
+            if(index>=blocs.Count-1){
                 index = 0;
             }else{
                 index++;
@@ -134,12 +135,13 @@ public class GameManager : MonoBehaviour
             
             if(persoAllie.Length==0||persoEnnemi.Length==0){
                 finPartie = true;
+                changeScene.changeScene();
             }
         }
     }
 
     /// <summary>
-    /// Prend les blocs que l'utilisateur à mit dans la barre
+    /// Prend les blocs que l'utilisateur ï¿½ mit dans la barre
     /// pour ensuite les lancer dans la classe runGame();.
     /// </summary>
     public void jouer()
@@ -149,7 +151,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Donne accés, à un personnage, à un bloc. 
+    /// Donne accï¿½s, ï¿½ un personnage, ï¿½ un bloc. 
     /// </summary>
     /// <param name="troupe"></param>
     public void accederBloc(GameObject troupe)
@@ -158,7 +160,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Getter pour le tableau des personnages alliés.
+    /// Getter pour le tableau des personnages alliï¿½s.
     /// </summary>
     /// <returns></returns>
     public GameObject[] getPersoAllie(){
@@ -176,19 +178,18 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Enleve un personnage d'un tableau.
     /// </summary>
-    /// <param name="indexAEnlever">Index du personnage à enlever</param>
+    /// <param name="indexAEnlever">Index du personnage ï¿½ enlever</param>
     public void enleverPerso(int indexAEnlever)
     {
 
         List<GameObject> list = new List<GameObject>(persoEnnemi);
         list.RemoveAt(indexAEnlever);
-        Debug.Log(list.Count);
         persoEnnemi = list.ToArray();
 
     }
 
     /// <summary>
-    /// Le déplacement des ennemis se fait aléatoirement.
+    /// Le dï¿½placement des ennemis se fait alï¿½atoirement.
     /// </summary>
     public void ennemiBouge() 
     {
@@ -237,11 +238,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject getObjet(TableauIndice indice){
         int tab =  indice.getTab();
-        int index = indice.getIndice();
+        int i = indice.getIndice();
         if(tab == 0){
-            return persoAllie[index];
+            return persoAllie[i];
         }else{
-            return persoEnnemi[index];
+            return persoEnnemi[i];
         }
     }
 }

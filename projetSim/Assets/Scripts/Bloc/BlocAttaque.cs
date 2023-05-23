@@ -7,7 +7,8 @@ public class BlocAttaque : Bloc
 {
     public Personnage personnage;
 
-    public override void executer(GameObject troupe)
+    override
+    public void executer(GameObject troupe)
     {
         troupe.GetComponent<Personnage>().attaque();
 
