@@ -37,6 +37,7 @@ public class Condition
 
         }
     }
+
     //Vérifie si la vie est conforme 
     private bool verifierHealth(){
         float vie = objet.GetComponent<Personnage>().getVie();
@@ -78,6 +79,7 @@ public class Condition
             }
         }
     }
+
     //Vérifie si la classe de la troupe est bien celle choisi à l'arrière
     private bool checkClass(){
         if(objet.GetComponent<Archer>() != null){
