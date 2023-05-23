@@ -32,9 +32,13 @@ Lien World : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/
 <pre> Lien : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Diagramme%20IHM.pdf > Diagramme IHM  </pre>
 <h1> Difficultés rencontrés </h1>
 <p>
-Une des difficultés rencontrées a été d'apprendre Unity. Unity a été un gros défi pour nous. On avait aucune connnaisance par rapport a Unity. On a du apprendre avec des vidéos et des tutoriels donc sa nous a prit du temps a partir le projet. Aussi, au fur et a mesure, on trouvait de meilleurs technique donc on devais toujours changer notre façon de faire et changer le code. Cela nous a beaucoup ralentis. Aussi les push avec Github. On a eu beaucoup de problème avec les merges. On devait toujour gérer les problèmes et cela nous a beaucoup ralenti. Une fois,on a même perdu une partie du code, du au problème de merge. Finalement, trouver de bon assets. Il a été difficile de trouver de bon asset qui convenaitt a notre jeu. On a donc du faire avec. Les bon assets était souvent a payant en plus.     
+Une des difficultés rencontrées a été d'apprendre Unity. Unity a été un gros défi pour nous. On avait aucune connnaisance par rapport à Unity. On a du apprendre avec des vidéos et des tutoriels donc sa nous a prit du temps a partir le projet. Aussi, au fur et a mesure, on trouvait de meilleurs technique donc on devais toujours changer notre façon de faire et changer le code. Cela nous a beaucoup ralentis. Aussi les push avec Github. On a eu beaucoup de problème avec les merges. On devait toujour gérer les problèmes et cela nous a beaucoup ralenti. Une fois,on a même perdu une partie du code, du au problème de merge. Finalement, trouver de bon assets. Il a été difficile de trouver de bon asset qui convenaitt a notre jeu. On a donc du faire avec. Les bon assets était souvent a payant en plus.     
 </p>
 <h1> Perspective </h1>
 <p> 
-
+Avec plus de temps, on aurait vraiment pu améliorer notre jeux. Premièrement, trouver de meilleur asset. On aurait pu sois les faire nous même avec plus de temps ou avec beaucoup de recherche en trouver des meilleurs. Deuxièmement, rajouter des fonctionnalités. On aurait pu rajouter plus de niveaux, plus de personnage et plus de bloc. 
+</p>
+<h1> Conclusion </h1>
+<p>
+On est vraiment content du produit final. Cela nous a prit beaucoup de temps et d'énergie. 
 </p>
