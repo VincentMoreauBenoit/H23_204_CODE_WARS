@@ -8,8 +8,11 @@ public class Archer : Personnage
     {
     }
 
-    // L'attaque est différente pour un archer. Il tir un flèche à l'infini et touche la première 
-    // personne que la fléche rencontre. Ensuite, la fléche disparait.
+
+    /// <summary>
+    /// L'attaque est différente pour un archer. Il tir un flèche à l'infini et touche la première 
+    /// personne que la fléche rencontre. Ensuite, la fléche disparait.
+    /// </summary>
     public override void attaque()
     {
 
@@ -18,7 +21,7 @@ public class Archer : Personnage
 
         RaycastHit hit;
 
-
+        // Le raycast cherche un position devant le personnage jusqu'à l'infini.
         if(Physics.Raycast(transform.position, devant, out hit, Mathf.Infinity))
         {
             if(hit.collider == true) 

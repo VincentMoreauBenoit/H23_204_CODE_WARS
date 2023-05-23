@@ -5,36 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] persoEnnemi;
+    // Variable ennemis
+    [SerializeField] private GameObject[] persoEnnemi;
     private int ennemis = 0;
-    [SerializeField]
-    private GameObject[] persoAllie;
-    private GameObject instantiated;
-    [SerializeField]
-    private List<Bloc> blocs = new List<Bloc>();
-    [SerializeField]
-    private int index = 0;
+    // Variable allier
+    [SerializeField] private GameObject[] persoAllie;
 
     [SerializeField] private ChangeScene changeScene;
 
+    // Variable pour personnage
+    private GameObject instantiated;
+    public Personnage personnage;
     private float tempsEntreAction = 1;
 
+
+    // Variable pour les blocs
+    [SerializeField] private List<Bloc> blocs = new List<Bloc>();
+    [SerializeField] private int index = 0;
+
+    // Variable pour savoir si c'est la fin de la 
+    // partie ou non.
     private bool finPartie = true;
 
-    public Personnage personnage;
 
-
-    [SerializeField]
-    private Vector3 zoneSize;
-
-    private void Start()
-    { 
-
-
-    }
-
-
+    /// <summary>
+    /// Un petit debug qui nous permet de tester le d�placement des personnages.
+    /// </summary>
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -70,7 +66,7 @@ public class GameManager : MonoBehaviour
             
         }
 
-        
+        // Petite pause avant chaque action des personnages
         if(!finPartie){
 
             tempsEntreAction-= Time.deltaTime;
@@ -80,6 +76,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // Regarde si un personnage alli� est mort. Si oui, le supprime de son tableau
+        // et le d�truit ensuite
         for(int i = 0; i < persoAllie.Length; i++) 
         {
             if (persoAllie[i].GetComponent<Personnage>().getVie() <= 0) 
@@ -92,6 +90,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // Regarde si un personnage ennemi est mort. Si oui, le supprime de son tableau
+        // et le d�truit ensuite
         for (int i = 0; i < persoEnnemi.Length; i++)
         {
             if (persoEnnemi[i].GetComponent<Personnage>().getVie() <= 0)
@@ -104,6 +104,11 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Lance la partie. Elle lance les bloc � la chaine et 
+    /// s'arr�te quand un personnage, que sa soit alli� ou ennemi, meurt.
+    /// </summary>
     public void runGame()
     {
         finPartie = false;
@@ -112,6 +117,8 @@ public class GameManager : MonoBehaviour
             {
                 ennemis++;
                 accederBloc(troupe);
+
+                // Les ennemis se d�placement une fois tout les deux tour des personnages alli�s. 
                 if(ennemis == persoAllie.Length * 2) 
                 {
 
@@ -132,24 +139,46 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Prend les blocs que l'utilisateur � mit dans la barre
+    /// pour ensuite les lancer dans la classe runGame();.
+    /// </summary>
     public void jouer()
     {
         blocs = Ligne.CreerListeBloc();
         runGame();
     }
+
+    /// <summary>
+    /// Donne acc�s, � un personnage, � un bloc. 
+    /// </summary>
+    /// <param name="troupe"></param>
     public void accederBloc(GameObject troupe)
     {
         blocs[index].executer(troupe);
     }
 
+    /// <summary>
+    /// Getter pour le tableau des personnages alli�s.
+    /// </summary>
+    /// <returns></returns>
     public GameObject[] getPersoAllie(){
         return persoAllie;
     }     
 
+    /// <summary>
+    /// Getter pour le tableau des personnages ennemis.
+    /// </summary>
+    /// <returns></returns>
     public GameObject[] getPersoEnnemi(){
         return persoEnnemi;
     }
 
+    /// <summary>
+    /// Enleve un personnage d'un tableau.
+    /// </summary>
+    /// <param name="indexAEnlever">Index du personnage � enlever</param>
     public void enleverPerso(int indexAEnlever)
     {
 
@@ -158,6 +187,10 @@ public class GameManager : MonoBehaviour
         persoEnnemi = list.ToArray();
 
     }
+
+    /// <summary>
+    /// Le d�placement des ennemis se fait al�atoirement.
+    /// </summary>
     public void ennemiBouge() 
     {
 

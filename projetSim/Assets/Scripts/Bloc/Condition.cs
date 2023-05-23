@@ -23,8 +23,18 @@ public class Condition
     public bool verifier(){
         if(indiceOperation != 0 && indiceOperation !=1){
             return verifierHealth();
+        }
+        else{
+
+            if (indiceOperation == 0)
+            {
+                return true;
+            }
+            
+
         }else{
             return checkClass();
+
         }
     }
     //Vérifie si la vie est conforme 

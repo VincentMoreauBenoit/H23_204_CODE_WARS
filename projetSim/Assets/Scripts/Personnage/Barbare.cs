@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Barbare : Personnage
 {
+    // Attaque phase
     private bool premierePhase = true;
     private bool deuxiemePhase = true;
 
@@ -12,13 +13,19 @@ public class Barbare : Personnage
     { 
     }
 
-
+    /// <summary>
+    /// L'attaque de base du barbare est de 7(zeroieme phase).
+    /// <exemple1>
+    /// Quand ces points de vies descendent jusqu'a 69 mais restent au-dessus de 30, son attaque de base est doubler(14 point d'attaque : première phase)
+    /// <exemple2>
+    /// Quand ces point de vies descendent en-dessous de 30, son attaque est encore doubler.(28 point d'attaque : deuxième phase)
+    ///  ** Si il descend tout de suite en dessous de 30 sans passer par la première phrase, son attaque sera quand même de 28.  
+    /// S
+    /// </summary>
     public override void attaque() 
     {
 
-        // L'attaque de base du barbare est de 7(zeroieme phase).
 
-        // Quand ces points de vies descendent jusqu'a 69 mais restent au-dessus de 30, son attaque de base est doubler(14 point d'attaque : première phase)
         if (premierePhase)
         {
             if (this.getVie() < 70 && this.getVie() > 30)
@@ -28,8 +35,6 @@ public class Barbare : Personnage
             }
         }
 
-        // Quand ces point de vies descendent en-dessous de 30, son attaque est encore doubler.(28 point d'attaque : deuxième phase)
-        // ** Si il descend tout de suite en dessous de 30 sans passer par la première phrase, son attaque sera quand même de 28.  
         if (deuxiemePhase)
         {
             if (this.getVie() < 30)
