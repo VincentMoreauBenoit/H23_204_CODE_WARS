@@ -30,3 +30,5 @@ Lien World : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/
 <pre> Lien : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Code%20Wars%20_%20Diagramme%20de%20classse%20(1).pdf > Diagramme de classe </a> </pre>
 <h3> Diagramme IHM </h3>
 <pre> Lien : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Diagramme%20IHM.pdf > Diagramme IHM  </pre>
+<h1> Difficultés rencontrés </h1>
+
