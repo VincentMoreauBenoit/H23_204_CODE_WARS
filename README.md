@@ -31,4 +31,4 @@ Lien World : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/
 <h3> Diagramme IHM </h3>
 <pre> Lien : <a href = https://github.com/VincentMoreauBenoit/H23_204_CODE_WARS/blob/main/Diff%C3%A9rent%20Diagramme/Diagramme%20IHM.pdf > Diagramme IHM  </pre>
 <h1> Difficultés rencontrés </h1>
-
+<p>Une des difficultés rencontrées a été d'apprendre Unity. Unity a été un gros défi pour nous. On avait aucune connnaisance par rapport a Unity. On a du apprendre avec des vidéos et des tutoriels donc sa nous a prit du temps a partir le projet. Aussi, au fur et a mesure, on trouvait de meilleurs technique donc on devais toujours changer notre façon de faire et changer le code. Cela nous a beaucoup ralentis. Aussi les push avec Github. On a eu beaucoup de problème avec les merges. On devait toujour gérer les problèmes et cela nous a beaucoup ralenti. Une fois, on a même, une fois, perdu une partie du code du au problème de merge. Finalement, trouver de bon assets. Il a été difficile de trouver de bon asset qui convenaitt a notre jeu. On na donc du faire avec. Les bon assets était souvent a payant en plus.     </p>
