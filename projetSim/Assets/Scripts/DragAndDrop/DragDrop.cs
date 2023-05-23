@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+// Script utiliser pour permettre aux éléments le possédant d'être drag and dropable
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
     private Canvas canvas;

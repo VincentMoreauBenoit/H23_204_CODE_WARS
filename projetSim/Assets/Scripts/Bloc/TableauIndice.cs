@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
+//Permets de transfomer un indice unique en deux en fonction du nombre d'objet dans les deux tableaux
 public class TableauIndice : MonoBehaviour
 {
     private GameManager gameManager;
@@ -25,6 +26,7 @@ public class TableauIndice : MonoBehaviour
     { 
         return indice; 
     }
+    //Converti entre les deux types d'indice
     public void convert(int indiceTotal)
     {
         if (indiceTotal <= nbAllie - 1)

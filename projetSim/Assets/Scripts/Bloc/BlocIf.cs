@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+//Bloc permettant d'imposer une condition sur le code en dessous et le prochain fin si
 public class BlocIf : Bloc
 {
     [SerializeField] private TMP_Dropdown dropdownComparant;
     [SerializeField] private TMP_Dropdown dropCompare;
     [SerializeField] private TMP_Dropdown dropComparer;
+    [SerializeField] private GameManager gameManager;
 
     public void Start()
     {
@@ -15,7 +17,20 @@ public class BlocIf : Bloc
     }
     public override void executer(GameObject troupe)
     {
-       
+        int perso = dropdownComparant.value();
+        int compare = dropCompare.value();
+        int comparer = dropComparer.value();
+        if(perso == 0){
+            Condition condition = new Condition(troupe,compare,comparer);
+        }else{
+            Condition condition = new Condition(gameManager.getObjet(troupe.accederBloc()),compare,comparer);
+        }
+
+        if(condition.verifier()){
+            troupe.GetComponent<Personnage>().flip(true);
+        }else{
+            troupe.GetComponent<Personnage>().flip(false);
+        }
     }
 
     public override int GetSiblingIndex()

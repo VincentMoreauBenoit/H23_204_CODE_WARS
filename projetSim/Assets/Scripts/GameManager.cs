@@ -206,4 +206,14 @@ public class GameManager : MonoBehaviour
 
         }
     }
+
+    public GameObject getObjet(TableauIndice indice){
+        int tab =  indice.getTab();
+        int index = indice.getIndice();
+        if(tab == 0){
+            return persoAllie[index];
+        }else{
+            return persoEnnemi[index];
+        }
+    }
 }

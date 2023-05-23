@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Empêche les classes de reçevoir un bloc dragable et delete celui-ci
 public class DropDelete : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)

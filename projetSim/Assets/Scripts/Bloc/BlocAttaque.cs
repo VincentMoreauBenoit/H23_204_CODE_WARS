@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Bloc permettant au troupe d'attaquer
 public class BlocAttaque : Bloc
 {
     public Personnage personnage;

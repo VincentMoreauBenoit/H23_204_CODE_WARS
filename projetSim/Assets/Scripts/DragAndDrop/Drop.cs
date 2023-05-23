@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Autorise les objets le possédant de reçevoir des objets dragable
 public class Drop : MonoBehaviour, IDropHandler
 {
     private RectTransform rectTransform;
