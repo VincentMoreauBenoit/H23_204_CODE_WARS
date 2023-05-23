@@ -247,6 +247,9 @@ public class Personnage : MonoBehaviour
         return vie.getLife();
     
     } 
+    public bool accesBlocs(){
+        return accesBloc;
+    }
 }
 
 

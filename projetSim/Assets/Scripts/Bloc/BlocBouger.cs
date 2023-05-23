@@ -5,6 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+//Bloc permettant au bloc de bouger sur la carte
 public class BlocBouger : Bloc
 {
     [SerializeField] Direction direction = Direction.AVANT;
@@ -32,6 +34,7 @@ public class BlocBouger : Bloc
         }
 
     }
+    //Permets de changer la direction qund l'utilisateur change celle-ci
     public void setDirection(string direct)
     {
         

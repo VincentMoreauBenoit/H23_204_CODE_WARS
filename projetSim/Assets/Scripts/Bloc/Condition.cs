@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using UnityEngine;
 
+
+//Permets de créer et de vérifier la condition d'un bloc if
 public class Condition
 {
     private GameObject objet;
@@ -17,8 +19,9 @@ public class Condition
         this.indiceOperation = indiceOperation;
     }
 
+    // Vérifie la condition du bloc
     public bool verifier(){
-        if(indiceOperation != 0 $$ indiceOperation !=1){
+        if(indiceOperation != 0 && indiceOperation !=1){
             return verifierHealth();
         }
         else{
@@ -28,10 +31,15 @@ public class Condition
                 return true;
             }
             
+
+        }else{
+            return checkClass();
+
         }
     }
+    //Vérifie si la vie est conforme 
     private bool verifierHealth(){
-        int vie = objet.GetComponent<Personnage>().getVie();
+        float vie = objet.GetComponent<Personnage>().getVie();
         if(indiceOperation%2 == 0 ){
             if(vie<=120){
                 if(indiceOperation == 4){
@@ -50,6 +58,61 @@ public class Condition
             }else{
                 return false;
             }
+        }else{
+            if(vie>=100){
+                if(indiceOperation == 5){
+                    if(vie!= 100){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }
+                
+                if(indiceOperation == 3){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                return false;
+            }
         }
+    }
+    //Vérifie si la classe de la troupe est bien celle choisi à l'arrière
+    private bool checkClass(){
+        if(objet.GetComponent<Archer>() != null){
+            if(indicePersoBase == 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(objet.GetComponent<Barbare>() != null){
+            if(indicePersoBase == 1){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+        if(objet.GetComponent<Infanterie>() != null){
+            if(indicePersoBase == 2){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+        if(objet.GetComponent<Mage>() != null){
+            if(indicePersoBase == 3){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
+        return false;
+
     }
 }

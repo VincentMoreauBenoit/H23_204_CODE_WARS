@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 
+
+// Bloc permmetant de mettre en mémoire une troupe qu'on peut ensuite utiliser dans le bloc if
 public class BlocVarTroupe : Bloc
 {
 

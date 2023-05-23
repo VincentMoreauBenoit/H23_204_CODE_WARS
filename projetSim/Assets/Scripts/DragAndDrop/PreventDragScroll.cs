@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+//Permets d'empêcher le scroll d'un pane avec un drag
 public class PreventDragScroll : ScrollRect
 {
     public override void OnBeginDrag(PointerEventData eventData) { }
