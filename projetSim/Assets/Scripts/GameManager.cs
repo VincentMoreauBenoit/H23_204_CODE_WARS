@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int index = 0;
 
+    [SerializeField] private ChangeScene changeScene;
+
     private float tempsEntreAction = 1;
 
     private bool finPartie = true;
@@ -118,8 +120,7 @@ public class GameManager : MonoBehaviour
                 
                 }
             }
-            index = 0;
-            if(index>=blocs.Count - 1){
+            if(index>=blocs.Count-1){
                 index = 0;
             }else{
                 index++;
@@ -127,6 +128,7 @@ public class GameManager : MonoBehaviour
             
             if(persoAllie.Length==0||persoEnnemi.Length==0){
                 finPartie = true;
+                changeScene.changeScene();
             }
         }
     }
@@ -153,7 +155,6 @@ public class GameManager : MonoBehaviour
 
         List<GameObject> list = new List<GameObject>(persoEnnemi);
         list.RemoveAt(indexAEnlever);
-        Debug.Log(list.Count);
         persoEnnemi = list.ToArray();
 
     }
@@ -204,11 +205,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject getObjet(TableauIndice indice){
         int tab =  indice.getTab();
-        int index = indice.getIndice();
+        int i = indice.getIndice();
         if(tab == 0){
-            return persoAllie[index];
+            return persoAllie[i];
         }else{
-            return persoEnnemi[index];
+            return persoEnnemi[i];
         }
     }
 }

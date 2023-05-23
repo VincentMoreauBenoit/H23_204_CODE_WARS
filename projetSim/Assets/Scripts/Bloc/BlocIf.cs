@@ -17,13 +17,14 @@ public class BlocIf : Bloc
     }
     public override void executer(GameObject troupe)
     {
-        int perso = dropdownComparant.value();
-        int compare = dropCompare.value();
-        int comparer = dropComparer.value();
+        int perso = dropdownComparant.value;
+        int compare = dropCompare.value;
+        int comparer = dropComparer.value;
+        Condition condition;
         if(perso == 0){
-            Condition condition = new Condition(troupe,compare,comparer);
+            condition = new Condition(troupe,compare,comparer);
         }else{
-            Condition condition = new Condition(gameManager.getObjet(troupe.accederBloc()),compare,comparer);
+            condition = new Condition(gameManager.getObjet(troupe.GetComponent<Personnage>().accederMemoire()),compare,comparer);
         }
 
         if(condition.verifier()){
