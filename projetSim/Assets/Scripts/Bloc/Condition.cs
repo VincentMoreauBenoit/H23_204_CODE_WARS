@@ -20,10 +20,14 @@ public class Condition
     public bool verifier(){
         if(indiceOperation != 0 $$ indiceOperation !=1){
             return verifierHealth();
-        }else{
-            if(indiceOperation == 0){
+        }
+        else{
+
+            if (indiceOperation == 0)
+            {
                 return true;
             }
+            
         }
     }
     private bool verifierHealth(){

@@ -8,18 +8,13 @@ public class ChangeScene : MonoBehaviour
 
     public string sceneNameToLoad;
 
-
-
-
-    void Start()
-    {
-
-    }
-
+    /// <summary>
+    /// Permet de changer d'une scene à une autre.
+    /// </summary>
     public void changeScene()
     {
         Ligne.viderList();
-        SceneManager.LoadScene(sceneNameToLoad); // Change la scene
+        SceneManager.LoadScene(sceneNameToLoad); // Changer la scène
 
     }
 }
